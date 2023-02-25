@@ -48,31 +48,6 @@
     
     
     <entry>
-      <title>html基础之第二天</title>
-      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/"/>
-      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/</url>
-      
-        <content type="html"><![CDATA[<h1 id="html-基础之第二天"><a href="#html-基础之第二天" class="headerlink" title="html 基础之第二天"></a>html 基础之第二天</h1><h2 id="16-async-和-defer-的作用是什么？有什么区别？"><a href="#16-async-和-defer-的作用是什么？有什么区别？" class="headerlink" title="16.async 和 defer 的作用是什么？有什么区别？"></a>16.async 和 defer 的作用是什么？有什么区别？</h2><p>（1）脚本没有 defer 或 async，浏览器会立即加载并执行指定的脚本，也就是说不等待后续载入的文档元素，读到就加载并执行。</p><p>（2）defer 属性表示延迟执行引入的 JavaScript，即这段 JavaScript 加载时 HTML 并未停止解析，这两个过程是并行的。在整个 document 解析完毕后再执行脚本文件，在 DOMContentLoaded 事件触发之前完成。多个脚本按顺序执行。</p><p>（3）async 属性表示异步执行引入的 JavaScript，与 defer 的区别在于，如果已经加载好，就会开始执行，也就是说它的执行仍然会阻塞文档的解析，只是它的加载过程不会阻塞。多个脚本的执行顺序无法保证。</p><h2 id="17-什么是文档的预解析？"><a href="#17-什么是文档的预解析？" class="headerlink" title="17.什么是文档的预解析？"></a>17.什么是文档的预解析？</h2><p>Webkit 和 Firefox 都做了这个优化，当执行 JavaScript 脚本时，另一个线程解析剩下的文档，并加载后面需要通过网络加载的资源。这种方式可以使资源并行加载从而使整体速度更快。需要注意的是，预解析并不改变 DOM 树，它将这个工作留给主解析过程，自己只解析外部资源的引用，比如外部脚本、样式表及图片。</p><h2 id="18-CSS-如何阻塞文档解析？"><a href="#18-CSS-如何阻塞文档解析？" class="headerlink" title="18. CSS 如何阻塞文档解析？"></a>18. CSS 如何阻塞文档解析？</h2><p>JavaScript 脚本执行时可能在文档的解析过程中请求样式信息，如果样式还没有加载和解析，脚本将得到错误的值，显然这将会导致很多问题。<br>所以如果浏览器尚未完成 CSSOM 的下载和构建，而我们却想在此时运行脚本，那么浏览器将延迟 JavaScript 脚本执行和文档的解析，直至其完成 CSSOM 的下载和构建。也就是说，在这种情况下，浏览器会先下载和构建 CSSOM，然后再执行 JavaScript，最后再继续文档的解析。</p><h2 id="19-渲染页面时常见哪些不良现象？"><a href="#19-渲染页面时常见哪些不良现象？" class="headerlink" title="19.渲染页面时常见哪些不良现象？"></a>19.渲染页面时常见哪些不良现象？</h2><p>样式闪烁的问题，由于浏览器渲染机制（比如 firefox），在 CSS 加载之前，先呈现了 HTML，就会导致展示出无样式内容，然后样式突然呈现的现象。会出现这个问题的原因主要是 CSS 加载时间过长，或者 CSS 被放在了文档底部。<br>白屏：有些浏览器渲染机制（比如 chrome）要先构建 DOM 树和 CSSOM 树，构建完成后再进行渲染，如果 CSS 部分放在 HTML 尾部，由于 CSS 未加载完成，浏览器迟迟未渲染，从而导致白屏；也可能是把 JS 文件放在头部，脚本的加载会阻塞后面</p><h2 id="20-如何优化关键渲染路径？"><a href="#20-如何优化关键渲染路径？" class="headerlink" title="20.如何优化关键渲染路径？"></a>20.如何优化关键渲染路径？</h2><p>最大限度减小以下三种可变因素：</p><p>（1）关键资源的数量。<br>（2）关键路径长度。<br>（3）关键字节的数量。</p><p>优化关键渲染路径的常规步骤如下：</p><p>（1）对关键路径进行分析和特性描述：资源数、字节数、长度。<br>（2）最大限度减少关键资源的数量：删除它们，延迟它们的下载，将它们标记为异步等。<br>（3）优化关键字节数以缩短下载时间（往返次数）。<br>（4）优化其余关键资源的加载顺序：您需要尽早下载所有关键资产，以缩短关键路径长度。</p><h2 id="21-什么是重绘和回流？（浏览器绘制过程）"><a href="#21-什么是重绘和回流？（浏览器绘制过程）" class="headerlink" title="21. 什么是重绘和回流？（浏览器绘制过程）"></a>21. 什么是重绘和回流？（浏览器绘制过程）</h2><p>重绘: 当渲染树中的一些元素需要更新属性，而这些属性只是影响元素的外观、风格，而不会影响布局的操作，比如 background-color，我们将这样的操作称为重绘。</p><p>回流：当渲染树中的一部分（或全部）因为元素的规模尺寸、布局、隐藏等改变而需要重新构建的操作，会影响到布局的操作，这样的操作我们称为回流。</p><h2 id="22-常见引起回流属性和方法？"><a href="#22-常见引起回流属性和方法？" class="headerlink" title="22.常见引起回流属性和方法？"></a>22.常见引起回流属性和方法？</h2><p>（1）添加或者删除可见的 DOM 元素；<br>（2）元素尺寸改变——边距、填充、边框、宽度和高度<br>（3）内容变化，比如用户在 input 框中输入文字<br>（4）浏览器窗口尺寸改变——resize 事件发生时<br>（5）计算 offsetWidth 和 offsetHeight 属性<br>（6）设置 style 属性的值<br>（7）当你修改网页的默认字体时。<br><code>常见引起重排属性和方法widthheightmarginpaddingdisplayborderpositionoverflowclientWidthclientHeightclientTopclientLeftoffsetWidthoffsetHeightoffsetTopoffsetLeftscrollWidthscrollHeightscrollTopscrollLeftscrolllntoView()scrollTo()getComputedStyle()getBoundingClientRect()scrolllntoViewlfNeeded()</code></p><h2 id="23-常见引起重绘属性和方法？"><a href="#23-常见引起重绘属性和方法？" class="headerlink" title="23. 常见引起重绘属性和方法？"></a>23. 常见引起重绘属性和方法？</h2><p><code>colorborder-stylevisibilitybackgroundtext-decorationbackground-imagebackground-positionbackground-repeatoutline-coloroutlineoutline-styleborder-radiusoutline-widthbox-shadowbackground-size</code></p><h2 id="24-如何减少回流？"><a href="#24-如何减少回流？" class="headerlink" title="24.如何减少回流？"></a>24.如何减少回流？</h2><p>（1）使用 transform 替代 top</p><p>（2）不要把节点的属性值放在一个循环里当成循环里的变量</p><p>（3）不要使用 table 布局，可能很小的一个小改动会造成整个 table 的重新布局</p><p>（4）把 DOM 离线后修改。如：使用 documentFragment 对象在内存里操作 DOM</p><p>（5）不要一条一条地修改 DOM 的样式。与其这样，还不如预先定义好 css 的 class，然后修改 DOM 的 className。</p><h2 id="25-为什么操作-DOM-慢？（浏览器绘制过程）"><a href="#25-为什么操作-DOM-慢？（浏览器绘制过程）" class="headerlink" title="25.为什么操作 DOM 慢？（浏览器绘制过程）?"></a>25.为什么操作 DOM 慢？（浏览器绘制过程）?</h2><p>一些 DOM 的操作或者属性访问可能会引起页面的回流和重绘，从而引起性能上的消耗。</p><h2 id="26-DOMContentLoaded-事件和-Load-事件的区别？"><a href="#26-DOMContentLoaded-事件和-Load-事件的区别？" class="headerlink" title="26. DOMContentLoaded 事件和 Load 事件的区别？"></a>26. DOMContentLoaded 事件和 Load 事件的区别？</h2><p>HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的加载完成。</p><p>Load 事件是当所有资源加载完成后触发的</p><h2 id="27-HTML5-有哪些新特性、移除了那些元素？"><a href="#27-HTML5-有哪些新特性、移除了那些元素？" class="headerlink" title="27.HTML5 有哪些新特性、移除了那些元素？"></a>27.HTML5 有哪些新特性、移除了那些元素？</h2><p>新增的有：</p><p>绘画 canvas;<br>用于媒介回放的 video 和 audio 元素;<br>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>sessionStorage 的数据在浏览器关闭后自动删除;<br>语意化更好的内容元素，比如 article、footer、header、nav、section;<br>表单控件，calendar、date、time、email、url、search;<br>新的技术 webworker, websocket;<br>新的文档属性 document.visibilityState</p><p>移除的元素有：</p><p>纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>对可用性产生负面影响的元素：frame，frameset，noframes；</p><h2 id="28-简述一下你对-HTML-语义化的理解？"><a href="#28-简述一下你对-HTML-语义化的理解？" class="headerlink" title="28.简述一下你对 HTML 语义化的理解？"></a>28.简述一下你对 HTML 语义化的理解？</h2><p>（1） 用正确的标签做正确的事情。<br>（2） html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>（3） 即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;<br>（4） 搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO ;<br>（5） 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p><h2 id="29-b-与-strong-的区别和-i-与-em-的区别？"><a href="#29-b-与-strong-的区别和-i-与-em-的区别？" class="headerlink" title="29.b 与 strong 的区别和 i 与 em 的区别？"></a>29.b 与 strong 的区别和 i 与 em 的区别？</h2><p>从页面显示效果来看，被 <code>&lt;b&gt;</code>和 <code>&lt;strong&gt;</code> 包围的文字将会被加粗，而被 <code>&lt;i&gt;</code>和 <code>&lt;em&gt;</code> 包围的文字将以斜体的形式呈现。</p><p>但是 <code>&lt;b&gt;</code> <code>&lt;i&gt;</code> 是自然样式标签，分别表示无意义的加粗，无意义的斜体，表现样式为 { font-weight: bolder}，仅仅表示「这<br>里应该用粗体显示」或者「这里应该用斜体显示」，此两个标签在 HTML4.01 中并不被推荐使用。</p><p>而 <code>&lt;em&gt;</code> 和 <code>&lt;strong&gt;</code>是语义样式标签。<code>&lt;em&gt;</code>表示一般的强调文本，而 <code>&lt;strong&gt;</code> 表示比 <code>&lt;em&gt;</code>语义更强的强调文本。</p><h2 id="30-前端需要注意哪些-SEO"><a href="#30-前端需要注意哪些-SEO" class="headerlink" title="30.前端需要注意哪些 SEO ?"></a>30.前端需要注意哪些 SEO ?</h2><p>1）合理的 title、description、keywords</p><p>（2）语义化的 HTML 代码，符合 W3C 规范</p><p>（3）重要内容 HTML 代码放在最前：</p><p>（4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容</p><p>（5）少用 iframe：搜索引擎不会抓取 iframe 中的内容</p><p>（6）非装饰性图片必须加 alt</p><p>（7）提高网站速度：网站速度是搜索引擎排序的一个重要指标</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>html基础之第三天天</title>
       <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8003/"/>
       <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8003/</url>
@@ -123,11 +98,11 @@
     
     
     <entry>
-      <title>html基础之第五天</title>
-      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/"/>
-      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/</url>
+      <title>html基础之第二天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/</url>
       
-        <content type="html"><![CDATA[<h1 id="html-基础之第五天"><a href="#html-基础之第五天" class="headerlink" title="html 基础之第五天"></a>html 基础之第五天</h1><h2 id="61-Html-规范中为什么要求引用资源不加协议头-http-或者-https？"><a href="#61-Html-规范中为什么要求引用资源不加协议头-http-或者-https？" class="headerlink" title="61.Html 规范中为什么要求引用资源不加协议头 http 或者 https？"></a>61.Html 规范中为什么要求引用资源不加协议头 http 或者 https？</h2><p>如果用户当前访问的页面是通过 HTTPS 协议来浏览的，那么网页中的资源也只能通过 HTTPS 协议来引用，否则浏览器会出现警告信息，不同浏览器警告信息展现形式不同。</p><p>为了解决这个问题，我们可以省略 URL 的协议声明，省略后浏览器照样可以正常引用相应的资源，这项解决方案称为 protocol-relative URL，暂且可译作协议相对 URL。</p><p>如果使用协议相对 URL，无论是使用 HTTPS，还是 HTTP 访问页面，浏览器都会以相同的协议请求页面中的资源，避免弹出类似的警告信息，同时还可以节省 5 字节的数据量。</p><h2 id="62-从输入-URL-到页面加载的全过程"><a href="#62-从输入-URL-到页面加载的全过程" class="headerlink" title="62.从输入 URL 到页面加载的全过程"></a>62.从输入 URL 到页面加载的全过程</h2><ol><li>首先在浏览器中输入 URL</li><li>查找缓存：浏览器先查看浏览器缓存-系统缓存-路由缓存中是否有该地址页面，如果有则显示页面内容。如果没有则进行下一步。<br>o 浏览器缓存：浏览器会记录 DNS 一段时间，因此，只是第一个地方解析 DNS 请求；<br>o 操作系统缓存:如果在浏览器缓存中不包含这个记录，则会使系统调用操作系统， 获取操作系统的记录(保存最近的 DNS 查询缓存)；<br>o 路由器缓存：如果上述两个步骤均不能成功获取 DNS 记录，继续搜索路由器缓存；<br>o ISP 缓存：若上述均失败，继续向 ISP 搜索。</li><li>DNS 域名解析：浏览器向 DNS 服务器发起请求，解析该 URL 中的域名对应的 IP 地址。DNS 服务器是基于 UDP 的，因此会用到 UDP 协议。</li><li>建立 TCP 连接：解析出 IP 地址后，根据 IP 地址和默认 80 端口，和服务器建立 TCP 连接</li><li>发起 HTTP 请求：浏览器发起读取文件的 HTTP 请求，，该请求报文作为 TCP 三次握手的第三次数据发送给服务器</li><li>服务器响应请求并返回结果：服务器对浏览器请求做出响应，并把对应的 html 文件发送给浏览器</li><li>关闭 TCP 连接：通过四次挥手释放 TCP 连接</li><li><p>浏览器渲染：客户端（浏览器）解析 HTML 内容并渲染出来，浏览器接收到数据包后的解析流程为：<br>o 构建 DOM 树：词法分析然后解析成 DOM 树（dom tree），是由 dom 元素及属性节点组成，树的根是 document 对象<br>o 构建 CSS 规则树：生成 CSS 规则树（CSS Rule Tree）<br>o 构建 render 树：Web 浏览器将 DOM 和 CSSOM 结合，并构建出渲染树（render tree）<br>o 布局（Layout）：计算出每个节点在屏幕中的位置<br>o 绘制（Painting）：即遍历 render 树，并使用 UI 后端层绘制每个节点。</p></li><li><p>JS 引擎解析过程：调用 JS 引擎执行 JS 代码（JS 的解释阶段，预处理阶段，执行阶段生成执行上下文，VO，作用域链、回收机制等等）<br>o 创建 window 对象：window 对象也叫全局执行环境，当页面产生时就被创建，所有的全局变量和函数都属于 window 的属性和方法，而 DOM Tree 也会映射在 window 的 doucment 对象上。当关闭网页或者关闭浏览器时，全局执行环境会被销毁。<br>o 加载文件：完成 js 引擎分析它的语法与词法是否合法，如果合法进入预编译<br>o 预编译：在预编译的过程中，浏览器会寻找全局变量声明，把它作为 window 的属性加入到 window 对象中，并给变量赋值为’undefined’；寻找全局函数声明，把它作为 window 的方法加入到 window 对象中，并将函数体赋值给他（匿名函数是不参与预编译的，因为它是变量）。而变量提升作为不合理的地方在 ES6 中已经解决了，函数提升还存在。<br>o 解释执行：执行到变量就赋值，如果变量没有被定义，也就没有被预编译直接赋值，在 ES5 非严格模式下这个变量会成为 window 的一个属性，也就是成为全局变量。string、int 这样的值就是直接把值放在变量的存储空间里，object 对象就是把指针指向变量的存储空间。函数执行，就将函数的环境推入一个环境的栈中，执行完成后再弹出，控制权交还给之前的环境。JS 作用域其实就是这样的执行流机制实现的。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="html-基础之第二天"><a href="#html-基础之第二天" class="headerlink" title="html 基础之第二天"></a>html 基础之第二天</h1><h2 id="16-async-和-defer-的作用是什么？有什么区别？"><a href="#16-async-和-defer-的作用是什么？有什么区别？" class="headerlink" title="16.async 和 defer 的作用是什么？有什么区别？"></a>16.async 和 defer 的作用是什么？有什么区别？</h2><p>（1）脚本没有 defer 或 async，浏览器会立即加载并执行指定的脚本，也就是说不等待后续载入的文档元素，读到就加载并执行。</p><p>（2）defer 属性表示延迟执行引入的 JavaScript，即这段 JavaScript 加载时 HTML 并未停止解析，这两个过程是并行的。在整个 document 解析完毕后再执行脚本文件，在 DOMContentLoaded 事件触发之前完成。多个脚本按顺序执行。</p><p>（3）async 属性表示异步执行引入的 JavaScript，与 defer 的区别在于，如果已经加载好，就会开始执行，也就是说它的执行仍然会阻塞文档的解析，只是它的加载过程不会阻塞。多个脚本的执行顺序无法保证。</p><h2 id="17-什么是文档的预解析？"><a href="#17-什么是文档的预解析？" class="headerlink" title="17.什么是文档的预解析？"></a>17.什么是文档的预解析？</h2><p>Webkit 和 Firefox 都做了这个优化，当执行 JavaScript 脚本时，另一个线程解析剩下的文档，并加载后面需要通过网络加载的资源。这种方式可以使资源并行加载从而使整体速度更快。需要注意的是，预解析并不改变 DOM 树，它将这个工作留给主解析过程，自己只解析外部资源的引用，比如外部脚本、样式表及图片。</p><h2 id="18-CSS-如何阻塞文档解析？"><a href="#18-CSS-如何阻塞文档解析？" class="headerlink" title="18. CSS 如何阻塞文档解析？"></a>18. CSS 如何阻塞文档解析？</h2><p>JavaScript 脚本执行时可能在文档的解析过程中请求样式信息，如果样式还没有加载和解析，脚本将得到错误的值，显然这将会导致很多问题。<br>所以如果浏览器尚未完成 CSSOM 的下载和构建，而我们却想在此时运行脚本，那么浏览器将延迟 JavaScript 脚本执行和文档的解析，直至其完成 CSSOM 的下载和构建。也就是说，在这种情况下，浏览器会先下载和构建 CSSOM，然后再执行 JavaScript，最后再继续文档的解析。</p><h2 id="19-渲染页面时常见哪些不良现象？"><a href="#19-渲染页面时常见哪些不良现象？" class="headerlink" title="19.渲染页面时常见哪些不良现象？"></a>19.渲染页面时常见哪些不良现象？</h2><p>样式闪烁的问题，由于浏览器渲染机制（比如 firefox），在 CSS 加载之前，先呈现了 HTML，就会导致展示出无样式内容，然后样式突然呈现的现象。会出现这个问题的原因主要是 CSS 加载时间过长，或者 CSS 被放在了文档底部。<br>白屏：有些浏览器渲染机制（比如 chrome）要先构建 DOM 树和 CSSOM 树，构建完成后再进行渲染，如果 CSS 部分放在 HTML 尾部，由于 CSS 未加载完成，浏览器迟迟未渲染，从而导致白屏；也可能是把 JS 文件放在头部，脚本的加载会阻塞后面</p><h2 id="20-如何优化关键渲染路径？"><a href="#20-如何优化关键渲染路径？" class="headerlink" title="20.如何优化关键渲染路径？"></a>20.如何优化关键渲染路径？</h2><p>最大限度减小以下三种可变因素：</p><p>（1）关键资源的数量。<br>（2）关键路径长度。<br>（3）关键字节的数量。</p><p>优化关键渲染路径的常规步骤如下：</p><p>（1）对关键路径进行分析和特性描述：资源数、字节数、长度。<br>（2）最大限度减少关键资源的数量：删除它们，延迟它们的下载，将它们标记为异步等。<br>（3）优化关键字节数以缩短下载时间（往返次数）。<br>（4）优化其余关键资源的加载顺序：您需要尽早下载所有关键资产，以缩短关键路径长度。</p><h2 id="21-什么是重绘和回流？（浏览器绘制过程）"><a href="#21-什么是重绘和回流？（浏览器绘制过程）" class="headerlink" title="21. 什么是重绘和回流？（浏览器绘制过程）"></a>21. 什么是重绘和回流？（浏览器绘制过程）</h2><p>重绘: 当渲染树中的一些元素需要更新属性，而这些属性只是影响元素的外观、风格，而不会影响布局的操作，比如 background-color，我们将这样的操作称为重绘。</p><p>回流：当渲染树中的一部分（或全部）因为元素的规模尺寸、布局、隐藏等改变而需要重新构建的操作，会影响到布局的操作，这样的操作我们称为回流。</p><h2 id="22-常见引起回流属性和方法？"><a href="#22-常见引起回流属性和方法？" class="headerlink" title="22.常见引起回流属性和方法？"></a>22.常见引起回流属性和方法？</h2><p>（1）添加或者删除可见的 DOM 元素；<br>（2）元素尺寸改变——边距、填充、边框、宽度和高度<br>（3）内容变化，比如用户在 input 框中输入文字<br>（4）浏览器窗口尺寸改变——resize 事件发生时<br>（5）计算 offsetWidth 和 offsetHeight 属性<br>（6）设置 style 属性的值<br>（7）当你修改网页的默认字体时。<br><code>常见引起重排属性和方法widthheightmarginpaddingdisplayborderpositionoverflowclientWidthclientHeightclientTopclientLeftoffsetWidthoffsetHeightoffsetTopoffsetLeftscrollWidthscrollHeightscrollTopscrollLeftscrolllntoView()scrollTo()getComputedStyle()getBoundingClientRect()scrolllntoViewlfNeeded()</code></p><h2 id="23-常见引起重绘属性和方法？"><a href="#23-常见引起重绘属性和方法？" class="headerlink" title="23. 常见引起重绘属性和方法？"></a>23. 常见引起重绘属性和方法？</h2><p><code>colorborder-stylevisibilitybackgroundtext-decorationbackground-imagebackground-positionbackground-repeatoutline-coloroutlineoutline-styleborder-radiusoutline-widthbox-shadowbackground-size</code></p><h2 id="24-如何减少回流？"><a href="#24-如何减少回流？" class="headerlink" title="24.如何减少回流？"></a>24.如何减少回流？</h2><p>（1）使用 transform 替代 top</p><p>（2）不要把节点的属性值放在一个循环里当成循环里的变量</p><p>（3）不要使用 table 布局，可能很小的一个小改动会造成整个 table 的重新布局</p><p>（4）把 DOM 离线后修改。如：使用 documentFragment 对象在内存里操作 DOM</p><p>（5）不要一条一条地修改 DOM 的样式。与其这样，还不如预先定义好 css 的 class，然后修改 DOM 的 className。</p><h2 id="25-为什么操作-DOM-慢？（浏览器绘制过程）"><a href="#25-为什么操作-DOM-慢？（浏览器绘制过程）" class="headerlink" title="25.为什么操作 DOM 慢？（浏览器绘制过程）?"></a>25.为什么操作 DOM 慢？（浏览器绘制过程）?</h2><p>一些 DOM 的操作或者属性访问可能会引起页面的回流和重绘，从而引起性能上的消耗。</p><h2 id="26-DOMContentLoaded-事件和-Load-事件的区别？"><a href="#26-DOMContentLoaded-事件和-Load-事件的区别？" class="headerlink" title="26. DOMContentLoaded 事件和 Load 事件的区别？"></a>26. DOMContentLoaded 事件和 Load 事件的区别？</h2><p>HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的加载完成。</p><p>Load 事件是当所有资源加载完成后触发的</p><h2 id="27-HTML5-有哪些新特性、移除了那些元素？"><a href="#27-HTML5-有哪些新特性、移除了那些元素？" class="headerlink" title="27.HTML5 有哪些新特性、移除了那些元素？"></a>27.HTML5 有哪些新特性、移除了那些元素？</h2><p>新增的有：</p><p>绘画 canvas;<br>用于媒介回放的 video 和 audio 元素;<br>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>sessionStorage 的数据在浏览器关闭后自动删除;<br>语意化更好的内容元素，比如 article、footer、header、nav、section;<br>表单控件，calendar、date、time、email、url、search;<br>新的技术 webworker, websocket;<br>新的文档属性 document.visibilityState</p><p>移除的元素有：</p><p>纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>对可用性产生负面影响的元素：frame，frameset，noframes；</p><h2 id="28-简述一下你对-HTML-语义化的理解？"><a href="#28-简述一下你对-HTML-语义化的理解？" class="headerlink" title="28.简述一下你对 HTML 语义化的理解？"></a>28.简述一下你对 HTML 语义化的理解？</h2><p>（1） 用正确的标签做正确的事情。<br>（2） html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>（3） 即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;<br>（4） 搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO ;<br>（5） 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p><h2 id="29-b-与-strong-的区别和-i-与-em-的区别？"><a href="#29-b-与-strong-的区别和-i-与-em-的区别？" class="headerlink" title="29.b 与 strong 的区别和 i 与 em 的区别？"></a>29.b 与 strong 的区别和 i 与 em 的区别？</h2><p>从页面显示效果来看，被 <code>&lt;b&gt;</code>和 <code>&lt;strong&gt;</code> 包围的文字将会被加粗，而被 <code>&lt;i&gt;</code>和 <code>&lt;em&gt;</code> 包围的文字将以斜体的形式呈现。</p><p>但是 <code>&lt;b&gt;</code> <code>&lt;i&gt;</code> 是自然样式标签，分别表示无意义的加粗，无意义的斜体，表现样式为 { font-weight: bolder}，仅仅表示「这<br>里应该用粗体显示」或者「这里应该用斜体显示」，此两个标签在 HTML4.01 中并不被推荐使用。</p><p>而 <code>&lt;em&gt;</code> 和 <code>&lt;strong&gt;</code>是语义样式标签。<code>&lt;em&gt;</code>表示一般的强调文本，而 <code>&lt;strong&gt;</code> 表示比 <code>&lt;em&gt;</code>语义更强的强调文本。</p><h2 id="30-前端需要注意哪些-SEO"><a href="#30-前端需要注意哪些-SEO" class="headerlink" title="30.前端需要注意哪些 SEO ?"></a>30.前端需要注意哪些 SEO ?</h2><p>1）合理的 title、description、keywords</p><p>（2）语义化的 HTML 代码，符合 W3C 规范</p><p>（3）重要内容 HTML 代码放在最前：</p><p>（4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容</p><p>（5）少用 iframe：搜索引擎不会抓取 iframe 中的内容</p><p>（6）非装饰性图片必须加 alt</p><p>（7）提高网站速度：网站速度是搜索引擎排序的一个重要指标</p>]]></content>
       
       
       <categories>
@@ -149,25 +124,6 @@
     
     <entry>
       <title>第一篇文章</title>
-      <link href="/2023/02/25/javascript/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/"/>
-      <url>/2023/02/25/javascript/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/</url>
-      
-        <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第一篇文章</title>
       <link href="/2023/02/25/node/2023-2-25-%E7%AC%AC%E5%9B%9B%E7%AF%87%E6%96%87%E7%AB%A0%20/"/>
       <url>/2023/02/25/node/2023-2-25-%E7%AC%AC%E5%9B%9B%E7%AF%87%E6%96%87%E7%AB%A0%20/</url>
       
@@ -180,6 +136,31 @@
           
       </categories>
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html基础之第五天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html-基础之第五天"><a href="#html-基础之第五天" class="headerlink" title="html 基础之第五天"></a>html 基础之第五天</h1><h2 id="61-Html-规范中为什么要求引用资源不加协议头-http-或者-https？"><a href="#61-Html-规范中为什么要求引用资源不加协议头-http-或者-https？" class="headerlink" title="61.Html 规范中为什么要求引用资源不加协议头 http 或者 https？"></a>61.Html 规范中为什么要求引用资源不加协议头 http 或者 https？</h2><p>如果用户当前访问的页面是通过 HTTPS 协议来浏览的，那么网页中的资源也只能通过 HTTPS 协议来引用，否则浏览器会出现警告信息，不同浏览器警告信息展现形式不同。</p><p>为了解决这个问题，我们可以省略 URL 的协议声明，省略后浏览器照样可以正常引用相应的资源，这项解决方案称为 protocol-relative URL，暂且可译作协议相对 URL。</p><p>如果使用协议相对 URL，无论是使用 HTTPS，还是 HTTP 访问页面，浏览器都会以相同的协议请求页面中的资源，避免弹出类似的警告信息，同时还可以节省 5 字节的数据量。</p><h2 id="62-从输入-URL-到页面加载的全过程"><a href="#62-从输入-URL-到页面加载的全过程" class="headerlink" title="62.从输入 URL 到页面加载的全过程"></a>62.从输入 URL 到页面加载的全过程</h2><ol><li>首先在浏览器中输入 URL</li><li>查找缓存：浏览器先查看浏览器缓存-系统缓存-路由缓存中是否有该地址页面，如果有则显示页面内容。如果没有则进行下一步。<br>o 浏览器缓存：浏览器会记录 DNS 一段时间，因此，只是第一个地方解析 DNS 请求；<br>o 操作系统缓存:如果在浏览器缓存中不包含这个记录，则会使系统调用操作系统， 获取操作系统的记录(保存最近的 DNS 查询缓存)；<br>o 路由器缓存：如果上述两个步骤均不能成功获取 DNS 记录，继续搜索路由器缓存；<br>o ISP 缓存：若上述均失败，继续向 ISP 搜索。</li><li>DNS 域名解析：浏览器向 DNS 服务器发起请求，解析该 URL 中的域名对应的 IP 地址。DNS 服务器是基于 UDP 的，因此会用到 UDP 协议。</li><li>建立 TCP 连接：解析出 IP 地址后，根据 IP 地址和默认 80 端口，和服务器建立 TCP 连接</li><li>发起 HTTP 请求：浏览器发起读取文件的 HTTP 请求，，该请求报文作为 TCP 三次握手的第三次数据发送给服务器</li><li>服务器响应请求并返回结果：服务器对浏览器请求做出响应，并把对应的 html 文件发送给浏览器</li><li>关闭 TCP 连接：通过四次挥手释放 TCP 连接</li><li><p>浏览器渲染：客户端（浏览器）解析 HTML 内容并渲染出来，浏览器接收到数据包后的解析流程为：<br>o 构建 DOM 树：词法分析然后解析成 DOM 树（dom tree），是由 dom 元素及属性节点组成，树的根是 document 对象<br>o 构建 CSS 规则树：生成 CSS 规则树（CSS Rule Tree）<br>o 构建 render 树：Web 浏览器将 DOM 和 CSSOM 结合，并构建出渲染树（render tree）<br>o 布局（Layout）：计算出每个节点在屏幕中的位置<br>o 绘制（Painting）：即遍历 render 树，并使用 UI 后端层绘制每个节点。</p></li><li><p>JS 引擎解析过程：调用 JS 引擎执行 JS 代码（JS 的解释阶段，预处理阶段，执行阶段生成执行上下文，VO，作用域链、回收机制等等）<br>o 创建 window 对象：window 对象也叫全局执行环境，当页面产生时就被创建，所有的全局变量和函数都属于 window 的属性和方法，而 DOM Tree 也会映射在 window 的 doucment 对象上。当关闭网页或者关闭浏览器时，全局执行环境会被销毁。<br>o 加载文件：完成 js 引擎分析它的语法与词法是否合法，如果合法进入预编译<br>o 预编译：在预编译的过程中，浏览器会寻找全局变量声明，把它作为 window 的属性加入到 window 对象中，并给变量赋值为’undefined’；寻找全局函数声明，把它作为 window 的方法加入到 window 对象中，并将函数体赋值给他（匿名函数是不参与预编译的，因为它是变量）。而变量提升作为不合理的地方在 ES6 中已经解决了，函数提升还存在。<br>o 解释执行：执行到变量就赋值，如果变量没有被定义，也就没有被预编译直接赋值，在 ES5 非严格模式下这个变量会成为 window 的一个属性，也就是成为全局变量。string、int 这样的值就是直接把值放在变量的存储空间里，object 对象就是把指针指向变量的存储空间。函数执行，就将函数的环境推入一个环境的栈中，执行完成后再弹出，控制权交还给之前的环境。JS 作用域其实就是这样的执行流机制实现的。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
       
     </entry>
     
@@ -215,6 +196,25 @@
       <categories>
           
           <category> 案例 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一篇文章</title>
+      <link href="/2023/02/25/javascript/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/"/>
+      <url>/2023/02/25/javascript/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/</url>
+      
+        <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
           
       </categories>
       
@@ -276,17 +276,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
@@ -303,6 +292,17 @@
       <url>/css/universe.css</url>
       
         <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {  display: block;  position: fixed;  margin: 0;  padding: 0;  border: 0;  outline: 0;  left: 0;  top: 0;  width: 100%;  height: 100%;  pointer-events: none;  /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */  z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -331,22 +331,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/js/universe.js"/>
-      <url>/js/universe.js</url>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[function dark () { window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame; var n, e, i, h, t = .05, s = document.getElementById("universe"), o = !0, a = "180,184,240", r = "226,225,142", d = "226,225,224", c = []; function f () { n = window.innerWidth, e = window.innerHeight, i = .216 * n, s.setAttribute("width", n), s.setAttribute("height", e) } function u () { h.clearRect(0, 0, n, e); for (var t = c.length, i = 0; i < t; i++) { var s = c[i]; s.move(), s.fadeIn(), s.fadeOut(), s.draw() } } function y () { this.reset = function () { this.giant = m(3), this.comet = !this.giant && !o && m(10), this.x = l(0, n - 10), this.y = l(0, e), this.r = l(1.1, 2.6), this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t, this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120), this.fadingOut = null, this.fadingIn = !0, this.opacity = 0, this.opacityTresh = l(.2, 1 - .4 * (this.comet + 1 - 1)), this.do = l(5e-4, .002) + .001 * (this.comet + 1 - 1) }, this.fadeIn = function () { this.fadingIn && (this.fadingIn = !(this.opacity > this.opacityTresh), this.opacity += this.do) }, this.fadeOut = function () { this.fadingOut && (this.fadingOut = !(this.opacity < 0), this.opacity -= this.do / 2, (this.x > n || this.y < 0) && (this.fadingOut = !1, this.reset())) }, this.draw = function () { if (h.beginPath(), this.giant) h.fillStyle = "rgba(" + a + "," + this.opacity + ")", h.arc(this.x, this.y, 2, 0, 2 * Math.PI, !1); else if (this.comet) { h.fillStyle = "rgba(" + d + "," + this.opacity + ")", h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, !1); for (var t = 0; t < 30; t++)h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")", h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2), h.fill() } else h.fillStyle = "rgba(" + r + "," + this.opacity + ")", h.rect(this.x, this.y, this.r, this.r); h.closePath(), h.fill() }, this.move = function () { this.x += this.dx, this.y += this.dy, !1 === this.fadingOut && this.reset(), (this.x > n - n / 4 || this.y < 0) && (this.fadingOut = !0) }, setTimeout(function () { o = !1 }, 50) } function m (t) { return Math.floor(1e3 * Math.random()) + 1 < 10 * t } function l (t, i) { return Math.random() * (i - t) + t } f(), window.addEventListener("resize", f, !1), function () { h = s.getContext("2d"); for (var t = 0; t < i; t++)c[t] = new y, c[t].reset(); u() }(), function t () { document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark' && u(), window.requestAnimationFrame(t) }() };dark()]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/js/universe.js"/>
+      <url>/js/universe.js</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[function dark () { window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame; var n, e, i, h, t = .05, s = document.getElementById("universe"), o = !0, a = "180,184,240", r = "226,225,142", d = "226,225,224", c = []; function f () { n = window.innerWidth, e = window.innerHeight, i = .216 * n, s.setAttribute("width", n), s.setAttribute("height", e) } function u () { h.clearRect(0, 0, n, e); for (var t = c.length, i = 0; i < t; i++) { var s = c[i]; s.move(), s.fadeIn(), s.fadeOut(), s.draw() } } function y () { this.reset = function () { this.giant = m(3), this.comet = !this.giant && !o && m(10), this.x = l(0, n - 10), this.y = l(0, e), this.r = l(1.1, 2.6), this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t, this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120), this.fadingOut = null, this.fadingIn = !0, this.opacity = 0, this.opacityTresh = l(.2, 1 - .4 * (this.comet + 1 - 1)), this.do = l(5e-4, .002) + .001 * (this.comet + 1 - 1) }, this.fadeIn = function () { this.fadingIn && (this.fadingIn = !(this.opacity > this.opacityTresh), this.opacity += this.do) }, this.fadeOut = function () { this.fadingOut && (this.fadingOut = !(this.opacity < 0), this.opacity -= this.do / 2, (this.x > n || this.y < 0) && (this.fadingOut = !1, this.reset())) }, this.draw = function () { if (h.beginPath(), this.giant) h.fillStyle = "rgba(" + a + "," + this.opacity + ")", h.arc(this.x, this.y, 2, 0, 2 * Math.PI, !1); else if (this.comet) { h.fillStyle = "rgba(" + d + "," + this.opacity + ")", h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, !1); for (var t = 0; t < 30; t++)h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")", h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2), h.fill() } else h.fillStyle = "rgba(" + r + "," + this.opacity + ")", h.rect(this.x, this.y, this.r, this.r); h.closePath(), h.fill() }, this.move = function () { this.x += this.dx, this.y += this.dy, !1 === this.fadingOut && this.reset(), (this.x > n - n / 4 || this.y < 0) && (this.fadingOut = !0) }, setTimeout(function () { o = !1 }, 50) } function m (t) { return Math.floor(1e3 * Math.random()) + 1 < 10 * t } function l (t, i) { return Math.random() * (i - t) + t } f(), window.addEventListener("resize", f, !1), function () { h = s.getContext("2d"); for (var t = 0; t < i; t++)c[t] = new y, c[t].reset(); u() }(), function t () { document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark' && u(), window.requestAnimationFrame(t) }() };dark()]]></content>
       
     </entry>
     
@@ -364,9 +364,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -375,9 +375,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
