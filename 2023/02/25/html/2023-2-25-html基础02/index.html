@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>html基础之第二天 | HanTongCode</title><meta name="author" content="HanTongCode"><meta name="copyright" content="HanTongCode"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="html基础面试题汇总16-30题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html基础之第二天">
+<meta property="og:url" content="http://example.com/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/index.html">
+<meta property="og:site_name" content="HanTongCode">
+<meta property="og:description" content="html基础面试题汇总16-30题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/envelope/violet.jpg">
+<meta property="article:published_time" content="2023-02-24T21:11:00.000Z">
+<meta property="article:modified_time" content="2023-02-24T21:11:00.000Z">
+<meta property="article:author" content="HanTongCode">
+<meta property="article:tag" content="html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/envelope/violet.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: HanTongCode","link":"链接: ","source":"来源: HanTongCode","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'html基础之第二天',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2023-02-25 05:11:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_2264842_b004iy0kk2b.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><i class="fa-fw fas fa-home"></i><i class="fa-fw fas fa-home faa-tada"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover" href="javascript:void(0);"><i class="fa-fw fas fa-book hide"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="fa-fw fas fa-newspaper faa-tada"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="fa-fw fas fa-file-alt faa-tada"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="fa-fw fas fa-laptop faa-tada"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:randomPost();"><i class="fa-fw fas fa-motorcycle faa-tada"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover" href="javascript:void(0);"><i class="fa-fw fas fa-list hide"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="fa-fw fas fa-music faa-tada"></i><span> 音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/movies/"><i class="fa-fw fas fa-video faa-tada"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><i class="fa-fw fas fa-envelope-open faa-tada"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/link/"><i class="fa-fw fas fa-link"></i><i class="fa-fw fas fa-link faa-tada"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><i class="fa-fw fas fa-heart"></i><i class="fa-fw fas fa-heart faa-tada"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/envelope/violet.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="HanTongCode"><span class="site-name">HanTongCode</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><i class="fa-fw fas fa-home"></i><i class="fa-fw fas fa-home faa-tada"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover" href="javascript:void(0);"><i class="fa-fw fas fa-book hide"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="fa-fw fas fa-newspaper faa-tada"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="fa-fw fas fa-file-alt faa-tada"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="fa-fw fas fa-laptop faa-tada"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:randomPost();"><i class="fa-fw fas fa-motorcycle faa-tada"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover" href="javascript:void(0);"><i class="fa-fw fas fa-list hide"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="fa-fw fas fa-music faa-tada"></i><span> 音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/movies/"><i class="fa-fw fas fa-video faa-tada"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><i class="fa-fw fas fa-envelope-open faa-tada"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/link/"><i class="fa-fw fas fa-link"></i><i class="fa-fw fas fa-link faa-tada"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><i class="fa-fw fas fa-heart"></i><i class="fa-fw fas fa-heart faa-tada"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">html基础之第二天</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-24T21:11:00.000Z" title="发表于 2023-02-25 05:11:00">2023-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-24T21:11:00.000Z" title="更新于 2023-02-25 05:11:00">2023-02-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/html/">html</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="html基础之第二天"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="html-基础之第二天"><a href="#html-基础之第二天" class="headerlink" title="html 基础之第二天"></a>html 基础之第二天</h1><h2 id="16-async-和-defer-的作用是什么？有什么区别？"><a href="#16-async-和-defer-的作用是什么？有什么区别？" class="headerlink" title="16.async 和 defer 的作用是什么？有什么区别？"></a>16.async 和 defer 的作用是什么？有什么区别？</h2><p>（1）脚本没有 defer 或 async，浏览器会立即加载并执行指定的脚本，也就是说不等待后续载入的文档元素，读到就加载并执行。</p>
+<p>（2）defer 属性表示延迟执行引入的 JavaScript，即这段 JavaScript 加载时 HTML 并未停止解析，这两个过程是并行的。在整个 document 解析完毕后再执行脚本文件，在 DOMContentLoaded 事件触发之前完成。多个脚本按顺序执行。</p>
+<p>（3）async 属性表示异步执行引入的 JavaScript，与 defer 的区别在于，如果已经加载好，就会开始执行，也就是说它的执行仍然会阻塞文档的解析，只是它的加载过程不会阻塞。多个脚本的执行顺序无法保证。</p>
+<h2 id="17-什么是文档的预解析？"><a href="#17-什么是文档的预解析？" class="headerlink" title="17.什么是文档的预解析？"></a>17.什么是文档的预解析？</h2><p>Webkit 和 Firefox 都做了这个优化，当执行 JavaScript 脚本时，另一个线程解析剩下的文档，并加载后面需要通过网络加载的资源。这种方式可以使资源并行加载从而使整体速度更快。需要注意的是，预解析并不改变 DOM 树，它将这个工作留给主解析过程，自己只解析外部资源的引用，比如外部脚本、样式表及图片。</p>
+<h2 id="18-CSS-如何阻塞文档解析？"><a href="#18-CSS-如何阻塞文档解析？" class="headerlink" title="18. CSS 如何阻塞文档解析？"></a>18. CSS 如何阻塞文档解析？</h2><p>JavaScript 脚本执行时可能在文档的解析过程中请求样式信息，如果样式还没有加载和解析，脚本将得到错误的值，显然这将会导致很多问题。<br>所以如果浏览器尚未完成 CSSOM 的下载和构建，而我们却想在此时运行脚本，那么浏览器将延迟 JavaScript 脚本执行和文档的解析，直至其完成 CSSOM 的下载和构建。也就是说，在这种情况下，浏览器会先下载和构建 CSSOM，然后再执行 JavaScript，最后再继续文档的解析。</p>
+<h2 id="19-渲染页面时常见哪些不良现象？"><a href="#19-渲染页面时常见哪些不良现象？" class="headerlink" title="19.渲染页面时常见哪些不良现象？"></a>19.渲染页面时常见哪些不良现象？</h2><p>样式闪烁的问题，由于浏览器渲染机制（比如 firefox），在 CSS 加载之前，先呈现了 HTML，就会导致展示出无样式内容，然后样式突然呈现的现象。会出现这个问题的原因主要是 CSS 加载时间过长，或者 CSS 被放在了文档底部。<br>白屏：有些浏览器渲染机制（比如 chrome）要先构建 DOM 树和 CSSOM 树，构建完成后再进行渲染，如果 CSS 部分放在 HTML 尾部，由于 CSS 未加载完成，浏览器迟迟未渲染，从而导致白屏；也可能是把 JS 文件放在头部，脚本的加载会阻塞后面</p>
+<h2 id="20-如何优化关键渲染路径？"><a href="#20-如何优化关键渲染路径？" class="headerlink" title="20.如何优化关键渲染路径？"></a>20.如何优化关键渲染路径？</h2><p>最大限度减小以下三种可变因素：</p>
+<p>（1）关键资源的数量。<br>（2）关键路径长度。<br>（3）关键字节的数量。</p>
+<p>优化关键渲染路径的常规步骤如下：</p>
+<p>（1）对关键路径进行分析和特性描述：资源数、字节数、长度。<br>（2）最大限度减少关键资源的数量：删除它们，延迟它们的下载，将它们标记为异步等。<br>（3）优化关键字节数以缩短下载时间（往返次数）。<br>（4）优化其余关键资源的加载顺序：您需要尽早下载所有关键资产，以缩短关键路径长度。</p>
+<h2 id="21-什么是重绘和回流？（浏览器绘制过程）"><a href="#21-什么是重绘和回流？（浏览器绘制过程）" class="headerlink" title="21. 什么是重绘和回流？（浏览器绘制过程）"></a>21. 什么是重绘和回流？（浏览器绘制过程）</h2><p>重绘: 当渲染树中的一些元素需要更新属性，而这些属性只是影响元素的外观、风格，而不会影响布局的操作，比如 background-color，我们将这样的操作称为重绘。</p>
+<p>回流：当渲染树中的一部分（或全部）因为元素的规模尺寸、布局、隐藏等改变而需要重新构建的操作，会影响到布局的操作，这样的操作我们称为回流。</p>
+<h2 id="22-常见引起回流属性和方法？"><a href="#22-常见引起回流属性和方法？" class="headerlink" title="22.常见引起回流属性和方法？"></a>22.常见引起回流属性和方法？</h2><p>（1）添加或者删除可见的 DOM 元素；<br>（2）元素尺寸改变——边距、填充、边框、宽度和高度<br>（3）内容变化，比如用户在 input 框中输入文字<br>（4）浏览器窗口尺寸改变——resize 事件发生时<br>（5）计算 offsetWidth 和 offsetHeight 属性<br>（6）设置 style 属性的值<br>（7）当你修改网页的默认字体时。<br><code>常见引起重排属性和方法
+width
+height
+margin
+padding
+display
+border
+position
+overflow
+clientWidth
+clientHeight
+clientTop
+clientLeft
+offsetWidth
+offsetHeight
+offsetTop
+offsetLeft
+scrollWidth
+scrollHeight
+scrollTop
+scrollLeft
+scrolllntoView()
+scrollTo()
+getComputedStyle()
+getBoundingClientRect()
+scrolllntoViewlfNeeded()</code></p>
+<h2 id="23-常见引起重绘属性和方法？"><a href="#23-常见引起重绘属性和方法？" class="headerlink" title="23. 常见引起重绘属性和方法？"></a>23. 常见引起重绘属性和方法？</h2><p><code>color
+border-style
+visibility
+background
+text-decoration
+background-image
+background-position
+background-repeat
+outline-color
+outline
+outline-style
+border-radius
+outline-width
+box-shadow
+background-size</code></p>
+<h2 id="24-如何减少回流？"><a href="#24-如何减少回流？" class="headerlink" title="24.如何减少回流？"></a>24.如何减少回流？</h2><p>（1）使用 transform 替代 top</p>
+<p>（2）不要把节点的属性值放在一个循环里当成循环里的变量</p>
+<p>（3）不要使用 table 布局，可能很小的一个小改动会造成整个 table 的重新布局</p>
+<p>（4）把 DOM 离线后修改。如：使用 documentFragment 对象在内存里操作 DOM</p>
+<p>（5）不要一条一条地修改 DOM 的样式。与其这样，还不如预先定义好 css 的 class，然后修改 DOM 的 className。</p>
+<h2 id="25-为什么操作-DOM-慢？（浏览器绘制过程）"><a href="#25-为什么操作-DOM-慢？（浏览器绘制过程）" class="headerlink" title="25.为什么操作 DOM 慢？（浏览器绘制过程）?"></a>25.为什么操作 DOM 慢？（浏览器绘制过程）?</h2><p>一些 DOM 的操作或者属性访问可能会引起页面的回流和重绘，从而引起性能上的消耗。</p>
+<h2 id="26-DOMContentLoaded-事件和-Load-事件的区别？"><a href="#26-DOMContentLoaded-事件和-Load-事件的区别？" class="headerlink" title="26. DOMContentLoaded 事件和 Load 事件的区别？"></a>26. DOMContentLoaded 事件和 Load 事件的区别？</h2><p>HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的加载完成。</p>
+<p>Load 事件是当所有资源加载完成后触发的</p>
+<h2 id="27-HTML5-有哪些新特性、移除了那些元素？"><a href="#27-HTML5-有哪些新特性、移除了那些元素？" class="headerlink" title="27.HTML5 有哪些新特性、移除了那些元素？"></a>27.HTML5 有哪些新特性、移除了那些元素？</h2><p>新增的有：</p>
+<p>绘画 canvas;<br>用于媒介回放的 video 和 audio 元素;<br>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>sessionStorage 的数据在浏览器关闭后自动删除;<br>语意化更好的内容元素，比如 article、footer、header、nav、section;<br>表单控件，calendar、date、time、email、url、search;<br>新的技术 webworker, websocket;<br>新的文档属性 document.visibilityState</p>
+<p>移除的元素有：</p>
+<p>纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+<h2 id="28-简述一下你对-HTML-语义化的理解？"><a href="#28-简述一下你对-HTML-语义化的理解？" class="headerlink" title="28.简述一下你对 HTML 语义化的理解？"></a>28.简述一下你对 HTML 语义化的理解？</h2><p>（1） 用正确的标签做正确的事情。<br>（2） html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>（3） 即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;<br>（4） 搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO ;<br>（5） 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+<h2 id="29-b-与-strong-的区别和-i-与-em-的区别？"><a href="#29-b-与-strong-的区别和-i-与-em-的区别？" class="headerlink" title="29.b 与 strong 的区别和 i 与 em 的区别？"></a>29.b 与 strong 的区别和 i 与 em 的区别？</h2><p>从页面显示效果来看，被 <code>&lt;b&gt;</code>和 <code>&lt;strong&gt;</code> 包围的文字将会被加粗，而被 <code>&lt;i&gt;</code>和 <code>&lt;em&gt;</code> 包围的文字将以斜体的形式呈现。</p>
+<p>但是 <code>&lt;b&gt;</code> <code>&lt;i&gt;</code> 是自然样式标签，分别表示无意义的加粗，无意义的斜体，表现样式为 { font-weight: bolder}，仅仅表示「这<br>里应该用粗体显示」或者「这里应该用斜体显示」，此两个标签在 HTML4.01 中并不被推荐使用。</p>
+<p>而 <code>&lt;em&gt;</code> 和 <code>&lt;strong&gt;</code>是语义样式标签。<code>&lt;em&gt;</code>表示一般的强调文本，而 <code>&lt;strong&gt;</code> 表示比 <code>&lt;em&gt;</code>语义更强的强调文本。</p>
+<h2 id="30-前端需要注意哪些-SEO"><a href="#30-前端需要注意哪些-SEO" class="headerlink" title="30.前端需要注意哪些 SEO ?"></a>30.前端需要注意哪些 SEO ?</h2><p>1）合理的 title、description、keywords</p>
+<p>（2）语义化的 HTML 代码，符合 W3C 规范</p>
+<p>（3）重要内容 HTML 代码放在最前：</p>
+<p>（4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容</p>
+<p>（5）少用 iframe：搜索引擎不会抓取 iframe 中的内容</p>
+<p>（6）非装饰性图片必须加 alt</p>
+<p>（7）提高网站速度：网站速度是搜索引擎排序的一个重要指标</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">HanTongCode</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/">http://example.com/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">HanTongCode</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/html/">html</a></div><div class="post_share"><div class="social-share" data-image="/img/envelope/violet.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8001/" title="html基础之第一天"><img class="cover" src="/img/envelope/violet.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-25</div><div class="title">html基础之第一天</div></div></a></div><div><a href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8003/" title="html基础之第三天天"><img class="cover" src="/img/envelope/violet.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-25</div><div class="title">html基础之第三天天</div></div></a></div><div><a href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8004/" title="html基础之第四天"><img class="cover" src="/img/envelope/violet.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-25</div><div class="title">html基础之第四天</div></div></a></div><div><a href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/" title="html基础之第五天"><img class="cover" src="/img/envelope/violet.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-25</div><div class="title">html基础之第五天</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html-%E5%9F%BA%E7%A1%80%E4%B9%8B%E7%AC%AC%E4%BA%8C%E5%A4%A9"><span class="toc-text">html 基础之第二天</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#16-async-%E5%92%8C-defer-%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">16.async 和 defer 的作用是什么？有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%87%E6%A1%A3%E7%9A%84%E9%A2%84%E8%A7%A3%E6%9E%90%EF%BC%9F"><span class="toc-text">17.什么是文档的预解析？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-CSS-%E5%A6%82%E4%BD%95%E9%98%BB%E5%A1%9E%E6%96%87%E6%A1%A3%E8%A7%A3%E6%9E%90%EF%BC%9F"><span class="toc-text">18. CSS 如何阻塞文档解析？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E6%97%B6%E5%B8%B8%E8%A7%81%E5%93%AA%E4%BA%9B%E4%B8%8D%E8%89%AF%E7%8E%B0%E8%B1%A1%EF%BC%9F"><span class="toc-text">19.渲染页面时常见哪些不良现象？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84%EF%BC%9F"><span class="toc-text">20.如何优化关键渲染路径？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81%EF%BC%9F%EF%BC%88%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BB%98%E5%88%B6%E8%BF%87%E7%A8%8B%EF%BC%89"><span class="toc-text">21. 什么是重绘和回流？（浏览器绘制过程）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E5%B8%B8%E8%A7%81%E5%BC%95%E8%B5%B7%E5%9B%9E%E6%B5%81%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">22.常见引起回流属性和方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%B8%B8%E8%A7%81%E5%BC%95%E8%B5%B7%E9%87%8D%E7%BB%98%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">23. 常见引起重绘属性和方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E5%A6%82%E4%BD%95%E5%87%8F%E5%B0%91%E5%9B%9E%E6%B5%81%EF%BC%9F"><span class="toc-text">24.如何减少回流？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%93%8D%E4%BD%9C-DOM-%E6%85%A2%EF%BC%9F%EF%BC%88%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BB%98%E5%88%B6%E8%BF%87%E7%A8%8B%EF%BC%89"><span class="toc-text">25.为什么操作 DOM 慢？（浏览器绘制过程）?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-DOMContentLoaded-%E4%BA%8B%E4%BB%B6%E5%92%8C-Load-%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">26. DOMContentLoaded 事件和 Load 事件的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-HTML5-%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E7%89%B9%E6%80%A7%E3%80%81%E7%A7%BB%E9%99%A4%E4%BA%86%E9%82%A3%E4%BA%9B%E5%85%83%E7%B4%A0%EF%BC%9F"><span class="toc-text">27.HTML5 有哪些新特性、移除了那些元素？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-%E7%AE%80%E8%BF%B0%E4%B8%80%E4%B8%8B%E4%BD%A0%E5%AF%B9-HTML-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">28.简述一下你对 HTML 语义化的理解？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-b-%E4%B8%8E-strong-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C-i-%E4%B8%8E-em-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">29.b 与 strong 的区别和 i 与 em 的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30-%E5%89%8D%E7%AB%AF%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E5%93%AA%E4%BA%9B-SEO"><span class="toc-text">30.前端需要注意哪些 SEO ?</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By HanTongCode</div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script defer src="/js/cursor.js"></script><script async src="//at.alicdn.com/t/font_2264842_b004iy0kk2b.js"></script><script async src="//at.alicdn.com/t/font_2032782_ev6ytrh30f.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/html/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 小韩のhtml (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/css/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 小韩のcss (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/javascript/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 小韩のjavascript (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/vue/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 小冰のvue (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/node/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 小韩のnode (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/数据结构与算法/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 小韩の数据结构与算法 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://example.com/categories/工具/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎨 小韩の工具 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="http://example.com/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础05/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础05/&quot;);" href="javascript:void(0);" alt="">html基础之第五天</a><div class="blog-slider__text">html基础面试题汇总61-75题</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础05/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础04/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础04/&quot;);" href="javascript:void(0);" alt="">html基础之第四天</a><div class="blog-slider__text">html基础面试题汇总46-60题</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础04/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础03/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础03/&quot;);" href="javascript:void(0);" alt="">html基础之第三天天</a><div class="blog-slider__text">html基础面试题汇总31-45题</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础03/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础02/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础02/&quot;);" href="javascript:void(0);" alt="">html基础之第二天</a><div class="blog-slider__text">html基础面试题汇总16-30题</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础02/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础01/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础01/&quot;);" href="javascript:void(0);" alt="">html基础之第一天</a><div class="blog-slider__text">html基础面试题汇总1-15题</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/html/2023-2-25-html基础01/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第四篇文章 /&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第四篇文章 /&quot;);" href="javascript:void(0);" alt="">第一篇文章</a><div class="blog-slider__text">我是文章的描述</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第四篇文章 /&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第六篇文章 /&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第六篇文章 /&quot;);" href="javascript:void(0);" alt="">第一篇文章</a><div class="blog-slider__text">我是文章的描述</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第六篇文章 /&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第五篇文章 /&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第五篇文章 /&quot;);" href="javascript:void(0);" alt="">第一篇文章</a><div class="blog-slider__text">我是文章的描述</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第五篇文章 /&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第三篇文章 /&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第三篇文章 /&quot;);" href="javascript:void(0);" alt="">第一篇文章</a><div class="blog-slider__text">我是文章的描述</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第三篇文章 /&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第二篇文章/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第二篇文章/&quot;);" href="javascript:void(0);" alt="">第一篇文章</a><div class="blog-slider__text">我是文章的描述</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第二篇文章/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第二篇文章 copy/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="/img/envelope/violet.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第二篇文章 copy/&quot;);" href="javascript:void(0);" alt="">第一篇文章</a><div class="blog-slider__text">我是文章的描述</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/02/25/2023-2-25-第二篇文章 copy/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '700ms');
+    arr[i].setAttribute('data-wow-delay', '700ms');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>

@@ -5,34 +5,15 @@
     
     <entry>
       <title>第一篇文章</title>
-      <link href="/2023/02/25/2023-2-25-%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-      <url>/2023/02/25/2023-2-25-%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      <link href="/2023/02/25/2023-2-25-%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%20copy/"/>
+      <url>/2023/02/25/2023-2-25-%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%20copy/</url>
       
         <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2>]]></content>
       
       
       <categories>
           
-          <category> html </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第一篇文章</title>
-      <link href="/2023/02/25/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/"/>
-      <url>/2023/02/25/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/</url>
-      
-        <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
+          <category> 工具 </category>
           
       </categories>
       
@@ -62,15 +43,15 @@
     
     <entry>
       <title>第一篇文章</title>
-      <link href="/2023/02/25/2023-2-25-%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%20copy/"/>
-      <url>/2023/02/25/2023-2-25-%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%20copy/</url>
+      <link href="/2023/02/25/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/"/>
+      <url>/2023/02/25/2023-2-25-%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%20/</url>
       
         <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2>]]></content>
       
       
       <categories>
           
-          <category> 工具 </category>
+          <category> javascript </category>
           
       </categories>
       
@@ -135,6 +116,254 @@
     </entry>
     
     
+    
+    <entry>
+      <title>html基础之第一天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8001/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8001/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html-基础之第一天"><a href="#html-基础之第一天" class="headerlink" title="html 基础之第一天"></a>html 基础之第一天</h1><h2 id="1-DOCTYPE-的作用是什么？"><a href="#1-DOCTYPE-的作用是什么？" class="headerlink" title="1. DOCTYPE 的作用是什么？"></a>1. DOCTYPE 的作用是什么？</h2><p>告知浏览器的解析器用什么文档标准解析这个文档。</p><h2 id="2-标准模式与兼容模式各有什么区别？"><a href="#2-标准模式与兼容模式各有什么区别？" class="headerlink" title="2. 标准模式与兼容模式各有什么区别？"></a>2. 标准模式与兼容模式各有什么区别？</h2><p>标准模式的渲染方式和 JS 引擎的解析方式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示，模拟老式浏览器的行为以防止站点无法工作。</p><h2 id="3-行内元素定义？"><a href="#3-行内元素定义？" class="headerlink" title="3.行内元素定义？"></a>3.行内元素定义？</h2><p>HTML4 中，元素被分成两大类: inline （内联元素）与 block（块级元素）。一个行内元素只占据它对应标签的边框所包含的空间。</p><p>常见的行内元素：<code>a b span img strong sub sup button input label select textarea</code></p><h2 id="4-块级元素定义？"><a href="#4-块级元素定义？" class="headerlink" title="4. 块级元素定义？"></a>4. 块级元素定义？</h2><p>块级元素占据其父元素（容器）的整个宽度，因此创建了一个“块”。</p><p>常见的块级元素有 <code>div ul ol li dl dt dd h1 h2 h3 h4 h5 h6 p</code></p><h2 id="5-行内元素与块级元素的区别？"><a href="#5-行内元素与块级元素的区别？" class="headerlink" title="5. 行内元素与块级元素的区别？"></a>5. 行内元素与块级元素的区别？</h2><p>HTML4 中，元素被分成两大类：inline （内联元素）与 block （块级元素）。</p><p>（1） 格式上，默认情况下，行内元素不会以新行开始，而块级元素会新起一行。<br>（2） 内容上，默认情况下，行内元素只能包含文本和其他行内元素。而块级元素可以包含行内元素和其他块级元素。<br>（3） 行内元素与块级元素属性的不同，主要是盒模型属性上：行内元素设置 width 无效，height 无效（可以设置 line-height），设置 margin 和 padding 的上下不会对其他元素产生影响。</p><h2 id="6-HTML5-元素的分类？"><a href="#6-HTML5-元素的分类？" class="headerlink" title="6. HTML5 元素的分类？"></a>6. HTML5 元素的分类？</h2><p>HTML4 中，元素被分成两大类: inline（内联元素）与 block（块级元素）。但在实际的开发过程中，因为页面表现的需要，前端工程师经常把 inline 元素的 display 值设定为 block （比如 a 标签），也经常把 block 元素的 display 值设定为 inline 之后更是出现了 inline-block 这一对外呈现 inline 对内呈现 block 的属性。因此，简单地把 HTML 元素划分为 inline 与 block 已经不再符合实际需求。</p><p>HTML5 中，元素主要分为 7 类：<br>(1)Metadata（元数据）通常出现在页面的 head 中，定义文档元数据信息的元素。其作用包括：影响文档中其它节点的展现与行为、定义文档与其它外部资源之间的关系等。<br><code>&lt;base&gt;，&lt;link&gt;，&lt;meta&gt;，&lt;noscript&gt;，&lt;script&gt;，&lt;style&gt;，&lt;title&gt;</code><br>(2)Flow（流） 所有可以放在 body 标签内，构成文档内容的元素均属于 Flow 元素。因此，元素：除了<code>base, link, meta, style, title</code>等只能放在 head 标签内的元素外，剩下的所有元素均属于 Flow 元素<br>(3)Sectioning（区段） 定义页面结构的元素，具体包含以下四个：article, aside, nav, section。<br>(4)Heading（标题） 所有标题元素属于 Heading。<br>元素：<code>&lt;h1&gt;，&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，&lt;h5&gt;，&lt;h6&gt;，&lt;hgroup&gt;</code><br>(5)Phrasing（短语） 所有可以放在 p 标签内，构成段落内容的元素均属于 Phrasing 元素。<br>Embedded（内联） 所有用于在网页中嵌入外部资源的元素均属于 Embedded 元素<br>(6)元素：<code>&lt;audio&gt;，&lt;video&gt;，&lt;canvas&gt;，&lt;iframe&gt;，&lt;img&gt;，&lt;math&gt;，&lt;object&gt;，&lt;svg&gt;，&lt;embed&gt;。</code><br>(7)Interactive（交互）与用户交互的内容。<br>元素：<code>&lt;a&gt; , &lt;audio&gt; , &lt;video&gt; , &lt;button&gt; , &lt;details&gt; , &lt;embed&gt; , &lt;iframe&gt; , &lt;img&gt; , &lt;input&gt; , &lt;label&gt; , &lt;object&gt; , &lt;select&gt; , &lt;textarea&gt;。</code></p><h2 id="7-常见的空元素？"><a href="#7-常见的空元素？" class="headerlink" title="7. 常见的空元素？"></a>7. 常见的空元素？</h2><p>空元素定义<br>标签内没有内容的 HTML 标签被称为空元素。空元素是在开始标签中关闭的。<br><code>br hr img input link meta</code></p><h2 id="8-link-标签定义"><a href="#8-link-标签定义" class="headerlink" title="8.link 标签定义"></a>8.link 标签定义</h2><p>link 标签定义文档与外部资源的关系。<br>link 元素是空元素，它仅包含属性。 此元素只能存在于 head 部分，不过它可出现任何次数。<br>link 标签中的 rel 属性定义了当前文档与被链接文档之间的关系。常见的 stylesheet 指的是定义一个外部加载的样式表。</p><h2 id="9-页面导入样式时，使用-link-和-import-有什么区别？"><a href="#9-页面导入样式时，使用-link-和-import-有什么区别？" class="headerlink" title="9. 页面导入样式时，使用 link 和 @import 有什么区别？"></a>9. 页面导入样式时，使用 link 和 @import 有什么区别？</h2><p>（1）从属关系区别。 @import 是 CSS 提供的语法规则，只有导入样式表的作用；link 是 HTML 提供的标签，不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性、引入网站图标等。</p><p>（2）加载顺序区别。加载页面时，link 标签引入的 CSS 被同时加载；@import 引入的 CSS 将在页面加载完毕后被加载。</p><p>（3）兼容性区别。@import 是 CSS2.1 才有的语法，故只可在 IE5+ 才能识别；link 标签作为 HTML 元素，不存在兼容性问题。</p><p>（4）DOM 可控性区别。可以通过 JS 操作 DOM ，插入 link 标签来改变样式；由于 DOM 方法是基于文档的，无法使用 @import 的方式插入样式。</p><h2 id="10-你对浏览器的理解？"><a href="#10-你对浏览器的理解？" class="headerlink" title="10. 你对浏览器的理解？"></a>10. 你对浏览器的理解？</h2><p>浏览器的主要功能是将用户选择的 web 资源呈现出来，它需要从服务器请求资源，并将其显示在浏览器窗口中，资源的格式通常是 HTML，也包括 PDF、image 及其他格式。用户用 URI（Uniform Resource Identifier 统一资源标识符）来指定所请求资源的位置。简单来说浏览器可以分为两部分，shell 和 内核。</p><p>shell 是指浏览器的外壳：例如菜单，工具栏等。主要是提供给用户界面操作，参数设置等等。它是调用内核来实现各种功能的。内核才是浏览器的核心。</p><p>内核是基于标记语言显示内容的程序或模块。也有一些浏览器并不区分外壳和内核。从 Mozilla 将 Gecko 独立出来后，才有了外壳和内核的明确划分。</p><h2 id="11-介绍一下你对浏览器内核的理解？"><a href="#11-介绍一下你对浏览器内核的理解？" class="headerlink" title="11. 介绍一下你对浏览器内核的理解？"></a>11. 介绍一下你对浏览器内核的理解？</h2><p>主要分成两部分：渲染引擎和 JS 引擎。</p><p>渲染引擎的职责就是渲染，即在浏览器窗口中显示所请求的内容。默认情况下，渲染引擎可以显示 html、xml 文档及图片，它也可以借助插件（一种浏览器扩展）显示其他类型数据，例如使用 PDF 阅读器插件，可以显示 PDF 格式。</p><p>JS 引擎：解析和执行 javascript 来实现网页的动态效果。最开始渲染引擎和 JS 引擎并没有区分的很明确，后来 JS 引擎越来越独立，内核就倾向于只指渲染引擎。</p><h2 id="12-常见的浏览器内核比较"><a href="#12-常见的浏览器内核比较" class="headerlink" title="12.常见的浏览器内核比较?"></a>12.常见的浏览器内核比较?</h2><p>Trident： IE 浏览器用的内核，因为在早期 IE 占有大量的市场份额，所以这种内核比较流行，但是实际上这个内核对真正的网页标准支持不是很好。 Trident 内核的大量 Bug 等安全问题没有得到解决，加上一些专家学者公开自己认为 IE 浏览器不安全的观点，使很多用户开始转向其他浏览器。</p><p>Gecko：这是 Firefox 和 Flock 所采用的内核，这个内核的优点就是功能强大、丰富，可以支持很多复杂网页效果和浏览器扩展接口，但是代价是也显而易见就是要消耗很多的资源，比如内存。</p><p>Presto：Opera 曾经采用的就是 Presto 内核，Presto 内核被称为公认的浏览网页速度最快的内核，这得益于它在开发时的天生优势，在处理 JS 脚本等脚本语言时，会比其他的内核快 3 倍左右，缺点就是为了达到很快的速度而丢掉了一部分网页兼容性。</p><p>Webkit：Webkit 是 Safari 采用的内核，它的优点就是网页浏览速度较快，虽然不及 Presto 但是也胜于 Gecko 和 Trident，缺点是对于网页代码的容错性不高，也就是说对网页代码的兼容性较低，会使一些编写不标准的网页无法正确显示。WebKit<br>前身是 KDE 小组的 KHTML 引擎，可以说 WebKit 是 KHTML 的一个开源的分支。</p><p>Blink：谷歌在 Chromium Blog 上发表博客，称将与苹果的开源浏览器核心 Webkit 分道扬镳，在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。其实 Blink 引擎就是 Webkit 的一个分支，就像 webkit 是<br>KHTML 的分支一样。Blink 引擎现在是谷歌公司与 Opera Software 共同研发，上面提到过的，Opera 弃用了自己的 Presto 内核，加入 Google 阵营，跟随谷歌一起研发 Blink。</p><h2 id="13-常见浏览器所用内核"><a href="#13-常见浏览器所用内核" class="headerlink" title="13. 常见浏览器所用内核?"></a>13. 常见浏览器所用内核?</h2><p>(1） IE 浏览器内核：Trident 内核，也是俗称的 IE 内核；</p><p>（2） Chrome 浏览器内核：统称为 Chromium 内核或 Chrome 内核，以前是 Webkit 内核，现在是 Blink 内核；</p><p>（3） Firefox 浏览器内核：Gecko 内核，俗称 Firefox 内核；</p><p>（4） Safari 浏览器内核：Webkit 内核；</p><p>（5） Opera 浏览器内核：最初是自己的 Presto 内核，后来加入谷歌大军，从 Webkit 又到了 Blink 内核；</p><p>（6） 360 浏览器、猎豹浏览器内核：IE + Chrome 双内核；</p><p>（7） 搜狗、遨游、QQ 浏览器内核：Trident（兼容模式）+ Webkit（高速模式）；</p><p>（8） 百度浏览器、世界之窗内核：IE 内核；</p><p>（9） 2345 浏览器内核：好像以前是 IE 内核，现在也是 IE + Chrome 双内核了；</p><p>（10）UC 浏览器内核：这个众口不一，UC 说是他们自己研发的 U3 内核，但好像还是基于 Webkit 和 Trident ，还有说是基于火狐内核。</p><h2 id="14-浏览器的渲染原理？"><a href="#14-浏览器的渲染原理？" class="headerlink" title="14. 浏览器的渲染原理？"></a>14. 浏览器的渲染原理？</h2><p>(1）首先解析收到的文档，根据文档定义构建一棵 DOM 树，DOM 树是由 DOM 元素及属性节点组成的。</p><p>（2）然后对 CSS 进行解析，生成 CSSOM 规则树。</p><p>（3）根据 DOM 树和 CSSOM 规则树构建渲染树。渲染树的节点被称为渲染对象，渲染对象是一个包含有颜色和大小等属性的矩形，渲染对象和 DOM 元素相对应，但这种对应关系不是一对一的，不可见的 DOM 元素不会被插入渲染树。还有一些 DOM 元素对应几个可见对象，它们一般是一些具有复杂结构的元素，无法用一个矩形来描述。</p><p>（4）当渲染对象被创建并添加到树中，它们并没有位置和大小，所以当浏览器生成渲染树以后，就会根据渲染树来进行布局（也可以叫做回流）。这一阶段浏览器要做的事情是要弄清楚各个节点在页面中的确切位置和大小。通常这一行为也被称为“自动重排”。</p><p>（5）布局阶段结束后是绘制阶段，遍历渲染树并调用渲染对象的 paint 方法将它们的内容显示在屏幕上，绘制使用 UI 基础组件。</p><p>值得注意的是，这个过程是逐步完成的，为了更好的用户体验，渲染引擎将会尽可能早的将内容呈现到屏幕上，并不会等到所有的 html 都解析完成之后再去构建和布局 render 树。它是解析完一部分内容就显示一部分内容，同时，可能还在通过网络下载其余内容。</p><h2 id="15-渲染过程中遇到-JS-文件怎么处理？（浏览器解析过程）"><a href="#15-渲染过程中遇到-JS-文件怎么处理？（浏览器解析过程）" class="headerlink" title="15. 渲染过程中遇到 JS 文件怎么处理？（浏览器解析过程）?"></a>15. 渲染过程中遇到 JS 文件怎么处理？（浏览器解析过程）?</h2><p>JavaScript 的加载、解析与执行会阻塞文档的解析，也就是说，在构建 DOM 时，HTML 解析器若遇到了 JavaScript，那么它会暂停文档的解析，将控制权移交给 JavaScript 引擎，等 JavaScript 引擎运行完毕，浏览器再从中断的地方恢复继续解析文档。也就是说，如果你想首屏渲染的越快，就越不应该在首屏就加载 JS 文件，这也是都建议将 script 标签放在 body 标签底部的原因。当然在当下，并不是说 script 标签必须放在底部，因为你可以给 script 标签添加 defer 或者 async 属性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html基础之第二天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8002/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html-基础之第二天"><a href="#html-基础之第二天" class="headerlink" title="html 基础之第二天"></a>html 基础之第二天</h1><h2 id="16-async-和-defer-的作用是什么？有什么区别？"><a href="#16-async-和-defer-的作用是什么？有什么区别？" class="headerlink" title="16.async 和 defer 的作用是什么？有什么区别？"></a>16.async 和 defer 的作用是什么？有什么区别？</h2><p>（1）脚本没有 defer 或 async，浏览器会立即加载并执行指定的脚本，也就是说不等待后续载入的文档元素，读到就加载并执行。</p><p>（2）defer 属性表示延迟执行引入的 JavaScript，即这段 JavaScript 加载时 HTML 并未停止解析，这两个过程是并行的。在整个 document 解析完毕后再执行脚本文件，在 DOMContentLoaded 事件触发之前完成。多个脚本按顺序执行。</p><p>（3）async 属性表示异步执行引入的 JavaScript，与 defer 的区别在于，如果已经加载好，就会开始执行，也就是说它的执行仍然会阻塞文档的解析，只是它的加载过程不会阻塞。多个脚本的执行顺序无法保证。</p><h2 id="17-什么是文档的预解析？"><a href="#17-什么是文档的预解析？" class="headerlink" title="17.什么是文档的预解析？"></a>17.什么是文档的预解析？</h2><p>Webkit 和 Firefox 都做了这个优化，当执行 JavaScript 脚本时，另一个线程解析剩下的文档，并加载后面需要通过网络加载的资源。这种方式可以使资源并行加载从而使整体速度更快。需要注意的是，预解析并不改变 DOM 树，它将这个工作留给主解析过程，自己只解析外部资源的引用，比如外部脚本、样式表及图片。</p><h2 id="18-CSS-如何阻塞文档解析？"><a href="#18-CSS-如何阻塞文档解析？" class="headerlink" title="18. CSS 如何阻塞文档解析？"></a>18. CSS 如何阻塞文档解析？</h2><p>JavaScript 脚本执行时可能在文档的解析过程中请求样式信息，如果样式还没有加载和解析，脚本将得到错误的值，显然这将会导致很多问题。<br>所以如果浏览器尚未完成 CSSOM 的下载和构建，而我们却想在此时运行脚本，那么浏览器将延迟 JavaScript 脚本执行和文档的解析，直至其完成 CSSOM 的下载和构建。也就是说，在这种情况下，浏览器会先下载和构建 CSSOM，然后再执行 JavaScript，最后再继续文档的解析。</p><h2 id="19-渲染页面时常见哪些不良现象？"><a href="#19-渲染页面时常见哪些不良现象？" class="headerlink" title="19.渲染页面时常见哪些不良现象？"></a>19.渲染页面时常见哪些不良现象？</h2><p>样式闪烁的问题，由于浏览器渲染机制（比如 firefox），在 CSS 加载之前，先呈现了 HTML，就会导致展示出无样式内容，然后样式突然呈现的现象。会出现这个问题的原因主要是 CSS 加载时间过长，或者 CSS 被放在了文档底部。<br>白屏：有些浏览器渲染机制（比如 chrome）要先构建 DOM 树和 CSSOM 树，构建完成后再进行渲染，如果 CSS 部分放在 HTML 尾部，由于 CSS 未加载完成，浏览器迟迟未渲染，从而导致白屏；也可能是把 JS 文件放在头部，脚本的加载会阻塞后面</p><h2 id="20-如何优化关键渲染路径？"><a href="#20-如何优化关键渲染路径？" class="headerlink" title="20.如何优化关键渲染路径？"></a>20.如何优化关键渲染路径？</h2><p>最大限度减小以下三种可变因素：</p><p>（1）关键资源的数量。<br>（2）关键路径长度。<br>（3）关键字节的数量。</p><p>优化关键渲染路径的常规步骤如下：</p><p>（1）对关键路径进行分析和特性描述：资源数、字节数、长度。<br>（2）最大限度减少关键资源的数量：删除它们，延迟它们的下载，将它们标记为异步等。<br>（3）优化关键字节数以缩短下载时间（往返次数）。<br>（4）优化其余关键资源的加载顺序：您需要尽早下载所有关键资产，以缩短关键路径长度。</p><h2 id="21-什么是重绘和回流？（浏览器绘制过程）"><a href="#21-什么是重绘和回流？（浏览器绘制过程）" class="headerlink" title="21. 什么是重绘和回流？（浏览器绘制过程）"></a>21. 什么是重绘和回流？（浏览器绘制过程）</h2><p>重绘: 当渲染树中的一些元素需要更新属性，而这些属性只是影响元素的外观、风格，而不会影响布局的操作，比如 background-color，我们将这样的操作称为重绘。</p><p>回流：当渲染树中的一部分（或全部）因为元素的规模尺寸、布局、隐藏等改变而需要重新构建的操作，会影响到布局的操作，这样的操作我们称为回流。</p><h2 id="22-常见引起回流属性和方法？"><a href="#22-常见引起回流属性和方法？" class="headerlink" title="22.常见引起回流属性和方法？"></a>22.常见引起回流属性和方法？</h2><p>（1）添加或者删除可见的 DOM 元素；<br>（2）元素尺寸改变——边距、填充、边框、宽度和高度<br>（3）内容变化，比如用户在 input 框中输入文字<br>（4）浏览器窗口尺寸改变——resize 事件发生时<br>（5）计算 offsetWidth 和 offsetHeight 属性<br>（6）设置 style 属性的值<br>（7）当你修改网页的默认字体时。<br><code>常见引起重排属性和方法widthheightmarginpaddingdisplayborderpositionoverflowclientWidthclientHeightclientTopclientLeftoffsetWidthoffsetHeightoffsetTopoffsetLeftscrollWidthscrollHeightscrollTopscrollLeftscrolllntoView()scrollTo()getComputedStyle()getBoundingClientRect()scrolllntoViewlfNeeded()</code></p><h2 id="23-常见引起重绘属性和方法？"><a href="#23-常见引起重绘属性和方法？" class="headerlink" title="23. 常见引起重绘属性和方法？"></a>23. 常见引起重绘属性和方法？</h2><p><code>colorborder-stylevisibilitybackgroundtext-decorationbackground-imagebackground-positionbackground-repeatoutline-coloroutlineoutline-styleborder-radiusoutline-widthbox-shadowbackground-size</code></p><h2 id="24-如何减少回流？"><a href="#24-如何减少回流？" class="headerlink" title="24.如何减少回流？"></a>24.如何减少回流？</h2><p>（1）使用 transform 替代 top</p><p>（2）不要把节点的属性值放在一个循环里当成循环里的变量</p><p>（3）不要使用 table 布局，可能很小的一个小改动会造成整个 table 的重新布局</p><p>（4）把 DOM 离线后修改。如：使用 documentFragment 对象在内存里操作 DOM</p><p>（5）不要一条一条地修改 DOM 的样式。与其这样，还不如预先定义好 css 的 class，然后修改 DOM 的 className。</p><h2 id="25-为什么操作-DOM-慢？（浏览器绘制过程）"><a href="#25-为什么操作-DOM-慢？（浏览器绘制过程）" class="headerlink" title="25.为什么操作 DOM 慢？（浏览器绘制过程）?"></a>25.为什么操作 DOM 慢？（浏览器绘制过程）?</h2><p>一些 DOM 的操作或者属性访问可能会引起页面的回流和重绘，从而引起性能上的消耗。</p><h2 id="26-DOMContentLoaded-事件和-Load-事件的区别？"><a href="#26-DOMContentLoaded-事件和-Load-事件的区别？" class="headerlink" title="26. DOMContentLoaded 事件和 Load 事件的区别？"></a>26. DOMContentLoaded 事件和 Load 事件的区别？</h2><p>HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的加载完成。</p><p>Load 事件是当所有资源加载完成后触发的</p><h2 id="27-HTML5-有哪些新特性、移除了那些元素？"><a href="#27-HTML5-有哪些新特性、移除了那些元素？" class="headerlink" title="27.HTML5 有哪些新特性、移除了那些元素？"></a>27.HTML5 有哪些新特性、移除了那些元素？</h2><p>新增的有：</p><p>绘画 canvas;<br>用于媒介回放的 video 和 audio 元素;<br>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>sessionStorage 的数据在浏览器关闭后自动删除;<br>语意化更好的内容元素，比如 article、footer、header、nav、section;<br>表单控件，calendar、date、time、email、url、search;<br>新的技术 webworker, websocket;<br>新的文档属性 document.visibilityState</p><p>移除的元素有：</p><p>纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>对可用性产生负面影响的元素：frame，frameset，noframes；</p><h2 id="28-简述一下你对-HTML-语义化的理解？"><a href="#28-简述一下你对-HTML-语义化的理解？" class="headerlink" title="28.简述一下你对 HTML 语义化的理解？"></a>28.简述一下你对 HTML 语义化的理解？</h2><p>（1） 用正确的标签做正确的事情。<br>（2） html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>（3） 即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;<br>（4） 搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO ;<br>（5） 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p><h2 id="29-b-与-strong-的区别和-i-与-em-的区别？"><a href="#29-b-与-strong-的区别和-i-与-em-的区别？" class="headerlink" title="29.b 与 strong 的区别和 i 与 em 的区别？"></a>29.b 与 strong 的区别和 i 与 em 的区别？</h2><p>从页面显示效果来看，被 <code>&lt;b&gt;</code>和 <code>&lt;strong&gt;</code> 包围的文字将会被加粗，而被 <code>&lt;i&gt;</code>和 <code>&lt;em&gt;</code> 包围的文字将以斜体的形式呈现。</p><p>但是 <code>&lt;b&gt;</code> <code>&lt;i&gt;</code> 是自然样式标签，分别表示无意义的加粗，无意义的斜体，表现样式为 { font-weight: bolder}，仅仅表示「这<br>里应该用粗体显示」或者「这里应该用斜体显示」，此两个标签在 HTML4.01 中并不被推荐使用。</p><p>而 <code>&lt;em&gt;</code> 和 <code>&lt;strong&gt;</code>是语义样式标签。<code>&lt;em&gt;</code>表示一般的强调文本，而 <code>&lt;strong&gt;</code> 表示比 <code>&lt;em&gt;</code>语义更强的强调文本。</p><h2 id="30-前端需要注意哪些-SEO"><a href="#30-前端需要注意哪些-SEO" class="headerlink" title="30.前端需要注意哪些 SEO ?"></a>30.前端需要注意哪些 SEO ?</h2><p>1）合理的 title、description、keywords</p><p>（2）语义化的 HTML 代码，符合 W3C 规范</p><p>（3）重要内容 HTML 代码放在最前：</p><p>（4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容</p><p>（5）少用 iframe：搜索引擎不会抓取 iframe 中的内容</p><p>（6）非装饰性图片必须加 alt</p><p>（7）提高网站速度：网站速度是搜索引擎排序的一个重要指标</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html基础之第三天天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8003/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8003/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html-基础之第三天"><a href="#html-基础之第三天" class="headerlink" title="html 基础之第三天"></a>html 基础之第三天</h1><h2 id="31-HTML5-的离线储存怎么使用，工作原理能不能解释一下？"><a href="#31-HTML5-的离线储存怎么使用，工作原理能不能解释一下？" class="headerlink" title="31.HTML5 的离线储存怎么使用，工作原理能不能解释一下？"></a>31.HTML5 的离线储存怎么使用，工作原理能不能解释一下？</h2><p>HTML5 的离线存储是基于一个新建的 .appcache 文件的缓存机制（不是存储技术），通过这个文件上的解析清单离线存储资源，这些资源就会像 cookie 一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p><p>（1）创建一个和 html 同名的 manifest 文件，然后在页面头部像下面一样加入一个 manifest 的属性。</p><pre><code> &lt;html lang=&quot;en&quot; manifest=&quot;index.manifest&quot;&gt;</code></pre><p>（2）在如下 cache.manifest 文件的编写离线存储的资源。<br>CACHE MANIFEST</p><h1 id="v0-11"><a href="#v0-11" class="headerlink" title="v0.11"></a>v0.11</h1><p>CACHE:<br>js/app.js<br>css/style.css<br>NETWORK:<br>resourse/logo.png<br>FALLBACK:<br>/ /offline.html</p><pre><code> CACHE: 表示需要离线存储的资源列表，由于包含 manifest 文件的页面将被自动离线存储，所以不需要把页面自身也列出        来。 NETWORK: 表示在它下面列出来的资源只有在在线的情况下才能访问，他们不会被离线存储，所以在离线情况下无法使用这些          资源。不过，如果在 CACHE 和 NETWORK 中有一个相同的资源，那么这个资源还是会被离线存储，也就是说 C          ACHE 的优先级更高。 FALLBACK: 表示如果访问第一个资源失败，那么就使用第二个资源来替换他，比如上面这个文件表示的就是如果访问根目录下           任何一个资源失败了，那么就去访问 offline.html 。</code></pre><p>（3）在离线状态时，操作 window.applicationCache 进行离线缓存的操作。</p><p>如何更新缓存：</p><p>（1）更新 manifest 文件<br>（2）通过 javascript 操作<br>（3）清除浏览器缓存</p><p>注意事项：</p><p>（1）浏览器对缓存数据的容量限制可能不太一样（某些浏览器设置的限制是每个站点 5MB）。<br>（2）如果 manifest 文件，或者内部列举的某一个文件不能正常下载，整个更新过程都将失败，浏览器继续全部使用老的缓存。<br>（3）引用 manifest 的 html 必须与 manifest 文件同源，在同一个域下。<br>（4）FALLBACK 中的资源必须和 manifest 文件同源。<br>（5）当一个资源被缓存后，该浏览器直接请求这个绝对路径也会访问缓存中的资源。<br>（6）站点中的其他页面即使没有设置 manifest 属性，请求的资源如果在缓存中也从缓存中访问。<br>（7）当 manifest 文件发生改变时，资源请求本身也会触发更新。</p><h2 id="32-浏览器是怎么对-HTML5-的离线储存资源进行管理和加载的呢？"><a href="#32-浏览器是怎么对-HTML5-的离线储存资源进行管理和加载的呢？" class="headerlink" title="32.浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢？"></a>32.浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢？</h2><p>在线的情况下，浏览器发现 html 头部有 manifest 属性，它会请求 manifest 文件，如果是第一次访问 app ，那么浏览器就会根据 manifest 文件的内容下载相应的资源并且进行离线存储。如果已经访问过 app 并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的 manifest 文件与旧的 manifest 文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。离线的情况下，浏览器就直接使用离线存储的资源。</p><h2 id="33-常见的浏览器端的存储技术有哪些？"><a href="#33-常见的浏览器端的存储技术有哪些？" class="headerlink" title="33.常见的浏览器端的存储技术有哪些？"></a>33.常见的浏览器端的存储技术有哪些？</h2><p>浏览器常见的存储技术有 cookie、localStorage 和 sessionStorage。<br>还有两种存储技术用于大规模数据存储，webSQL（已被废除）和 indexDB。</p><h1 id="34-请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#34-请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="34.请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>34.请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h1><p>SessionStorage， LocalStorage， Cookie 这三者都可以被用来在浏览器端存储数据，而且都是字符串类型的键值对。区别在于前两者属于 HTML5 WebStorage，创建它们的目的便于客户端存储数据。而 cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）。cookie 数据始终在同源（协议、主机、端口相同）的 http 请求中携带（即使不需要），会在浏览器和服务器间来回传递。</p><p>存储大小：<br>cookie 数据大小不能超过 4 k 。<br>sessionStorage 和 localStorage 虽然也有存储大小的限制，但比 cookie 大得多，可以达到 5M 或更大。</p><p>有期时间：<br>localStorage 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据。<br>sessionStorage 数据在页面会话结束时会被清除。页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会<br>保持原来的页面会话。在新标签或窗口打开一个页面时会在顶级浏览上下文中初始化一个新的会话。<br>cookie 设置的 cookie 过期时间之前一直有效，即使窗口或浏览器关闭。</p><p>作用域：<br>sessionStorage 只在同源的同窗口（或标签页）中共享数据，也就是只在当前会话中共享。<br>localStorage 在所有同源窗口中都是共享的。<br>cookie 在所有同源窗口中都是共享的。</p><h2 id="35-iframe-有那些缺点？"><a href="#35-iframe-有那些缺点？" class="headerlink" title="35. iframe 有那些缺点？"></a>35. iframe 有那些缺点？</h2><p>（1） iframe 会阻塞主页面的 onload 事件。window 的 onload 事件需要在所有 iframe 加载完毕后（包含里面的元素）才<br>会触发。在 Safari 和 Chrome 里，通过 JavaScript 动态设置 iframe 的 src 可以避免这种阻塞情况。<br>（2） 搜索引擎的检索程序无法解读这种页面，不利于网页的 SEO 。<br>（3） iframe 和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。<br>（4） 浏览器的后退按钮失效。<br>（5） 小型的移动设备无法完全显示框架。</p><h2 id="36-Label-的作用是什么？是怎么用的？"><a href="#36-Label-的作用是什么？是怎么用的？" class="headerlink" title="36.Label 的作用是什么？是怎么用的？"></a>36.Label 的作用是什么？是怎么用的？</h2><p>label 标签来定义表单控制间的关系，当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。</p><p><code>&lt;label for=&quot;Name&quot;&gt;Number:&lt;/label&gt; &lt;input type=“text“ name=&quot;Name&quot; id=&quot;Name&quot;/&gt;</code></p><h2 id="37-HTML5-的-form-的自动完成功能是什么？"><a href="#37-HTML5-的-form-的自动完成功能是什么？" class="headerlink" title="37.HTML5 的 form 的自动完成功能是什么？"></a>37.HTML5 的 form 的自动完成功能是什么？</h2><p>autocomplete 属性规定输入字段是否应该启用自动完成功能。默认为启用，设置为 autocomplete=off 可以关闭该功能。</p><p>自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。</p><p>autocomplete 属性适用于 <form>，以及下面的 <input> 类型：text, search, url, telephone, email, password,<br>datepickers, range 以及 color。</p><h2 id="38-如何实现浏览器内多个标签页之间的通信"><a href="#38-如何实现浏览器内多个标签页之间的通信" class="headerlink" title="38.如何实现浏览器内多个标签页之间的通信?"></a>38.如何实现浏览器内多个标签页之间的通信?</h2><p>（1）使用 WebSocket，通信的标签页连接同一个服务器，发送消息到服务器后，服务器推送消息给所有连接的客户端。</p><p>（2）使用 SharedWorker （只在 chrome 浏览器实现了），两个页面共享同一个线程，通过向线程发送数据和接收数据来实现标<br>签页之间的双向通行。</p><p>（3）可以调用 localStorage、cookies 等本地存储方式，localStorge 另一个浏览上下文里被添加、修改或删除时，它都会触<br>发一个 storage 事件，我们通过监听 storage 事件，控制它的值来进行页面信息通信；</p><p>（4）如果我们能够获得对应标签页的引用，通过 postMessage 方法也是可以实现多个标签页通信的。</p><h2 id="38-webSocket-如何兼容低版本浏览器？"><a href="#38-webSocket-如何兼容低版本浏览器？" class="headerlink" title="38.webSocket 如何兼容低版本浏览器？"></a>38.webSocket 如何兼容低版本浏览器？</h2><p>Adobe Flash Socket 、<br>ActiveX HTMLFile (IE) 、<br>基于 multipart 编码发送 XHR 、<br>基于长轮询的 XHR</p><h2 id="39-页面可见性（Page-Visibility-API）-可以有哪些用途？"><a href="#39-页面可见性（Page-Visibility-API）-可以有哪些用途？" class="headerlink" title="39.页面可见性（Page Visibility API） 可以有哪些用途？"></a>39.页面可见性（Page Visibility API） 可以有哪些用途？</h2><p>这个新的 API 的意义在于，通过监听网页的可见性，可以预判网页的卸载，还可以用来节省资源，减缓电能的消耗。比如，一旦用户<br>不看网页，下面这些网页行为都是可以暂停的。</p><p>（1）对服务器的轮询<br>（2）网页动画<br>（3）正在播放的音频或视频</p><h2 id="40-如何在页面上实现一个圆形的可点击区域？"><a href="#40-如何在页面上实现一个圆形的可点击区域？" class="headerlink" title="40.如何在页面上实现一个圆形的可点击区域？"></a>40.如何在页面上实现一个圆形的可点击区域？</h2><p>（1）纯 html 实现，使用 <area> 来给 <img> 图像标记热点区域的方式，<map> 标签用来定义一个客户端图像映射，<area><br>标签用来定义图像映射中的区域，area 元素永远嵌套在 map 元素内部，我们可以将 area 区域设置为圆形，从而实现可点击的圆形区域。</p><p>（2）纯 css 实现，使用 border-radius ，当 border-radius 的长度等于宽高相等的元素值的一半时，即可实现一个圆形的点击区域。</p><p>（3）纯 js 实现，判断一个点在不在圆上的简单算法，通过监听文档的点击事件，获取每次点击时鼠标的位置，判断该位置是否在我们规定的圆形区域内。</p><h2 id="41-实现不使用-border-画出-1-px-高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。"><a href="#41-实现不使用-border-画出-1-px-高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。" class="headerlink" title="41.实现不使用 border 画出 1 px 高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。"></a>41.实现不使用 border 画出 1 px 高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。</h2><p><code>&lt;div style=&quot;height:1px;overflow:hidden;background:red&quot;&gt;&lt;/div&gt;</code></p><h2 id="42-title-与-h1-的区别？"><a href="#42-title-与-h1-的区别？" class="headerlink" title="42. title 与 h1 的区别？"></a>42. title 与 h1 的区别？</h2><p>title 属性没有明确意义只表示是个标题，h1 则表示层次明确的标题，对页面信息的抓取也有很大的影响。</p><h2 id="43-的-title-和-alt-有什么区别？"><a href="#43-的-title-和-alt-有什么区别？" class="headerlink" title="43. 的 title 和 alt 有什么区别？"></a>43.<img> 的 title 和 alt 有什么区别？</h2><p>title 通常当鼠标滑动到元素上的时候显示</p><p>alt 是 <img> 的特有属性，是图片内容的等价描述，用于图片无法加载时显示、读屏器阅读图片。可提图片高可访问性，除了纯装<br>饰图片外都必须设置有意义的值，搜索引擎会重点分析。</p><h2 id="44-Canvas-和-SVG-有什么区别？"><a href="#44-Canvas-和-SVG-有什么区别？" class="headerlink" title="44.Canvas 和 SVG 有什么区别？"></a>44.Canvas 和 SVG 有什么区别？</h2><p>Canvas 是一种通过 JavaScript 来绘制 2D 图形的方法。Canvas 是逐像素来进行渲染的，因此当我们对 Canvas 进行缩放时，<br>会出现锯齿或者失真的情况。</p><p>SVG 是一种使用 XML 描述 2D 图形的语言。SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。我们可以为某个元素<br>附加 JavaScript 事件监听函数。并且 SVG 保存的是图形的绘制方法，因此当 SVG 图形缩放时并不会失真。</p><h2 id="45-网页验证码是干嘛的，是为了解决什么安全问题？"><a href="#45-网页验证码是干嘛的，是为了解决什么安全问题？" class="headerlink" title="45.网页验证码是干嘛的，是为了解决什么安全问题？"></a>45.网页验证码是干嘛的，是为了解决什么安全问题？</h2><p>（1）区分用户是计算机还是人的公共全自动程序。可以防止恶意破解密码、刷票、论坛灌水<br>（2）有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html基础之第四天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8004/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8004/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html-基础之第四天"><a href="#html-基础之第四天" class="headerlink" title="html 基础之第四天"></a>html 基础之第四天</h1><h2 id="46-渐进增强和优雅降级的定义"><a href="#46-渐进增强和优雅降级的定义" class="headerlink" title="46 渐进增强和优雅降级的定义"></a>46 渐进增强和优雅降级的定义</h2><p>渐进增强：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p><p>优雅降级：一开始就根据高版本浏览器构建完整的功能，然后再针对低版本浏览器进行兼容。</p><h2 id="47-attribute-和-property-的区别是什么？"><a href="#47-attribute-和-property-的区别是什么？" class="headerlink" title="47.attribute 和 property 的区别是什么？"></a>47.attribute 和 property 的区别是什么？</h2><p>attribute 是 dom 元素在文档中作为 html 标签拥有的属性；<br>property 就是 dom 元素在 js 中作为对象拥有的属性。<br>对于 html 的标准属性来说，attribute 和 property 是同步的，是会自动更新的，<br>但是对于自定义的属性来说，他们是不同步的。</p><h2 id="48-IE-各版本和-Chrome-可以并行下载多少个资源？"><a href="#48-IE-各版本和-Chrome-可以并行下载多少个资源？" class="headerlink" title="48. IE 各版本和 Chrome 可以并行下载多少个资源？"></a>48. IE 各版本和 Chrome 可以并行下载多少个资源？</h2><p>（1） IE6 2 个并发<br>（2） iE7 升级之后的 6 个并发，之后版本也是 6 个<br>（3） Firefox，chrome 也是 6 个</p><h2 id="49-Flash、Ajax-各自的优缺点，在使用中如何取舍？"><a href="#49-Flash、Ajax-各自的优缺点，在使用中如何取舍？" class="headerlink" title="49. Flash、Ajax 各自的优缺点，在使用中如何取舍？"></a>49. Flash、Ajax 各自的优缺点，在使用中如何取舍？</h2><p>Flash：<br>（1） Flash 适合处理多媒体、矢量图形、访问机器<br>（2） 对 CSS、处理文本上不足，不容易被搜索</p><p>Ajax：<br>（1） Ajax 对 CSS、文本支持很好，支持搜索<br>（2） 多媒体、矢量图形、机器访问不足</p><p>共同点：<br>（1） 与服务器的无刷新传递消息<br>（2） 可以检测用户离线和在线状态<br>（3） 操作 DOM</p><h2 id="50-怎么重构页面？"><a href="#50-怎么重构页面？" class="headerlink" title="50.怎么重构页面？"></a>50.怎么重构页面？</h2><p>（1） 编写 CSS<br>（2） 让页面结构更合理化，提升用户体验<br>（3） 实现良好的页面效果和提升性能</p><h2 id="51-浏览器架构"><a href="#51-浏览器架构" class="headerlink" title="51.浏览器架构"></a>51.浏览器架构</h2><ul><li>用户界面<ul><li>主进程</li><li>内核<ul><li>渲染引擎</li><li>JS 引擎<ul><li>执行栈</li></ul></li><li>事件触发线程<ul><li>消息队列<ul><li>微任务</li><li>宏任务</li></ul></li></ul></li><li>网络异步线程</li><li>定时器线程</li></ul></li></ul></li></ul><h2 id="52-css-reset-和-normalize-css-有什么区别？"><a href="#52-css-reset-和-normalize-css-有什么区别？" class="headerlink" title="52.css reset 和 normalize.css 有什么区别？"></a>52.css reset 和 normalize.css 有什么区别？</h2><p>reset 的目的，是将所有的浏览器的自带样式重置掉，这样更易于保持各浏览器渲染的一致性。</p><p>normalize 的理念则是尽量保留浏览器的默认样式，不进行太多的重置，而尽力让这些样式保持一致并尽可能与现代标准相符合。</p><h2 id="53-用于预格式化文本的标签是？"><a href="#53-用于预格式化文本的标签是？" class="headerlink" title="53.用于预格式化文本的标签是？"></a>53.用于预格式化文本的标签是？</h2><p>预格式化就是保留文字在源码中的格式 最后显示出来样式与源码中的样式一致 所见即所得。</p><p> <pre> 定义预格式文本，保持文本原有的格式</p><h2 id="54-head-标签中必不少的是？"><a href="#54-head-标签中必不少的是？" class="headerlink" title="54.head 标签中必不少的是？"></a>54.head 标签中必不少的是？</h2><p> <head> 标签用于定义文档的头部，它是所有头部元素的容器。<head> 中的元素可以引用脚本、指示浏览器在哪里找到样式表、提供元信息等等。</p><p> 文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。</p><p> 下面这些标签可用在 head 部分：<base>, <link>, <meta>, <script>, <style>, 以及 <title>。</p><p> <title> 定义文档的标题，它是 head 部分中唯一必需的元素。</p><h2 id="55-HTML5-新增的表单元素有？"><a href="#55-HTML5-新增的表单元素有？" class="headerlink" title="55.HTML5 新增的表单元素有？"></a>55.HTML5 新增的表单元素有？</h2><p> datalist 规定输入域的选项列表，通过 option 创建！ </p><p> keygen 提供一种验证用户的可靠方法，密钥对生成器，私钥存于客户端，公钥发到服务器，用于之后验证客户端证书！</p><p> output 元素用于不同类型的输出！</p><h2 id="56-在-HTML5-中，哪个方法用于获得用户的当前位置？"><a href="#56-在-HTML5-中，哪个方法用于获得用户的当前位置？" class="headerlink" title="56.在 HTML5 中，哪个方法用于获得用户的当前位置？"></a>56.在 HTML5 中，哪个方法用于获得用户的当前位置？</h2><p> getCurrentPosition()</p><h2 id="57-disabled-和-readonly-的区别？"><a href="#57-disabled-和-readonly-的区别？" class="headerlink" title="57.disabled 和 readonly 的区别？"></a>57.disabled 和 readonly 的区别？</h2><p> disabled 指当 input 元素加载时禁用此元素。input 内容不会随着表单提交。</p><p> readonly 规定输入字段为只读。input 内容会随着表单提交。</p><p> 无论设置 readonly 还是 disabled，通过 js 脚本都能更改 input 的 value</p><h2 id="58-主流浏览器内核私有属性-css-前缀？"><a href="#58-主流浏览器内核私有属性-css-前缀？" class="headerlink" title="58.主流浏览器内核私有属性 css 前缀？"></a>58.主流浏览器内核私有属性 css 前缀？</h2><p> mozilla 内核 （firefox,flock 等）    -moz<br> webkit  内核 （safari,chrome 等）   -webkit<br> opera   内核 （opera 浏览器）        -o<br> trident 内核 （ie 浏览器）           -ms</p><h2 id="59-前端性能优化？"><a href="#59-前端性能优化？" class="headerlink" title="59.前端性能优化？"></a>59.前端性能优化？</h2><p> 前端性能优化主要是为了提高页面的加载速度，优化用户的访问体验。我认为可以从这些方面来进行优化。</p><p> 第一个方面是页面的内容方面</p><p> （1）通过文件合并、css 雪碧图、使用 base64 等方式来减少 HTTP 请求数，避免过多的请求造成等待的情况。</p><p> （2）通过 DNS 缓存等机制来减少 DNS 的查询次数。</p><p> （3）通过设置缓存策略，对常用不变的资源进行缓存。</p><p> （4）使用延迟加载的方式，来减少页面首屏加载时需要请求的资源。延迟加载的资源当用户需要访问时，再去请求加载。</p><p> （5）通过用户行为，对某些资源使用预加载的方式，来提高用户需要访问资源时的响应速度。</p><p> 第二个方面是服务器方面</p><p> （1）使用 CDN 服务，来提高用户对于资源请求时的响应速度。</p><p> （2）服务器端启用 Gzip、Deflate 等方式对于传输的资源进行压缩，减小文件的体积。</p><p> （3）尽可能减小 cookie 的大小，并且通过将静态资源分配到其他域名下，来避免对静态资源请求时携带不必要的 cookie</p><p> 第三个方面是 CSS 和 JavaScript 方面</p><p> （1）把样式表放在页面的 head 标签中，减少页面的首次渲染的时间。</p><p> （2）避免使用 @import 标签。</p><p> （3）尽量把 js 脚本放在页面底部或者使用 defer 或 async 属性，避免脚本的加载和执行阻塞页面的渲染。</p><p> （4）通过对 JavaScript 和 CSS 的文件进行压缩，来减小文件的体积。</p><h2 id="60-扫描二维码登录网页是什么原理，前后两个事件是如何联系的？"><a href="#60-扫描二维码登录网页是什么原理，前后两个事件是如何联系的？" class="headerlink" title="60.扫描二维码登录网页是什么原理，前后两个事件是如何联系的？"></a>60.扫描二维码登录网页是什么原理，前后两个事件是如何联系的？</h2><p>用户进入登录网页后，服务器生成一个 uid 来标识一个用户。对应的二维码对应了一个对应 uid 的链接，任何能够识别二维码的应用都可以获得这个链接，但是它们没有办法和对应登录的服务器响应。比如微信的二维码登录，只有用微信识这个二维码才有效。当微信客户端打开这个链接时，对应的登录服务器就获得了用户的相关信息。这个时候登录网页根据先前的长连接获取到服务器传过来的用户信息进行显示。然后提前预加载一些登录后可能用到的信息。当客户端点击确认授权登陆后，服务器生成一个权限令牌给网页，网页之后使用这个令牌进行信息的交互过程。由于整个授权的过程都是在手机端进行的，因此能够很好的防止 PC 上泛滥的病毒。并且在超时、网络断开、其他设备上登录后，此前获得的令牌或丢失、或失效，对授权过程能够形成有效的安全防护。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html基础之第五天</title>
+      <link href="/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/"/>
+      <url>/2023/02/25/html/2023-2-25-html%E5%9F%BA%E7%A1%8005/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html-基础之第五天"><a href="#html-基础之第五天" class="headerlink" title="html 基础之第五天"></a>html 基础之第五天</h1><h2 id="61-Html-规范中为什么要求引用资源不加协议头-http-或者-https？"><a href="#61-Html-规范中为什么要求引用资源不加协议头-http-或者-https？" class="headerlink" title="61.Html 规范中为什么要求引用资源不加协议头 http 或者 https？"></a>61.Html 规范中为什么要求引用资源不加协议头 http 或者 https？</h2><p>如果用户当前访问的页面是通过 HTTPS 协议来浏览的，那么网页中的资源也只能通过 HTTPS 协议来引用，否则浏览器会出现警告信息，不同浏览器警告信息展现形式不同。</p><p>为了解决这个问题，我们可以省略 URL 的协议声明，省略后浏览器照样可以正常引用相应的资源，这项解决方案称为 protocol-relative URL，暂且可译作协议相对 URL。</p><p>如果使用协议相对 URL，无论是使用 HTTPS，还是 HTTP 访问页面，浏览器都会以相同的协议请求页面中的资源，避免弹出类似的警告信息，同时还可以节省 5 字节的数据量。</p><h2 id="62-从输入-URL-到页面加载的全过程"><a href="#62-从输入-URL-到页面加载的全过程" class="headerlink" title="62.从输入 URL 到页面加载的全过程"></a>62.从输入 URL 到页面加载的全过程</h2><ol><li>首先在浏览器中输入 URL</li><li>查找缓存：浏览器先查看浏览器缓存-系统缓存-路由缓存中是否有该地址页面，如果有则显示页面内容。如果没有则进行下一步。<br>o 浏览器缓存：浏览器会记录 DNS 一段时间，因此，只是第一个地方解析 DNS 请求；<br>o 操作系统缓存:如果在浏览器缓存中不包含这个记录，则会使系统调用操作系统， 获取操作系统的记录(保存最近的 DNS 查询缓存)；<br>o 路由器缓存：如果上述两个步骤均不能成功获取 DNS 记录，继续搜索路由器缓存；<br>o ISP 缓存：若上述均失败，继续向 ISP 搜索。</li><li>DNS 域名解析：浏览器向 DNS 服务器发起请求，解析该 URL 中的域名对应的 IP 地址。DNS 服务器是基于 UDP 的，因此会用到 UDP 协议。</li><li>建立 TCP 连接：解析出 IP 地址后，根据 IP 地址和默认 80 端口，和服务器建立 TCP 连接</li><li>发起 HTTP 请求：浏览器发起读取文件的 HTTP 请求，，该请求报文作为 TCP 三次握手的第三次数据发送给服务器</li><li>服务器响应请求并返回结果：服务器对浏览器请求做出响应，并把对应的 html 文件发送给浏览器</li><li>关闭 TCP 连接：通过四次挥手释放 TCP 连接</li><li><p>浏览器渲染：客户端（浏览器）解析 HTML 内容并渲染出来，浏览器接收到数据包后的解析流程为：<br>o 构建 DOM 树：词法分析然后解析成 DOM 树（dom tree），是由 dom 元素及属性节点组成，树的根是 document 对象<br>o 构建 CSS 规则树：生成 CSS 规则树（CSS Rule Tree）<br>o 构建 render 树：Web 浏览器将 DOM 和 CSSOM 结合，并构建出渲染树（render tree）<br>o 布局（Layout）：计算出每个节点在屏幕中的位置<br>o 绘制（Painting）：即遍历 render 树，并使用 UI 后端层绘制每个节点。</p></li><li><p>JS 引擎解析过程：调用 JS 引擎执行 JS 代码（JS 的解释阶段，预处理阶段，执行阶段生成执行上下文，VO，作用域链、回收机制等等）<br>o 创建 window 对象：window 对象也叫全局执行环境，当页面产生时就被创建，所有的全局变量和函数都属于 window 的属性和方法，而 DOM Tree 也会映射在 window 的 doucment 对象上。当关闭网页或者关闭浏览器时，全局执行环境会被销毁。<br>o 加载文件：完成 js 引擎分析它的语法与词法是否合法，如果合法进入预编译<br>o 预编译：在预编译的过程中，浏览器会寻找全局变量声明，把它作为 window 的属性加入到 window 对象中，并给变量赋值为’undefined’；寻找全局函数声明，把它作为 window 的方法加入到 window 对象中，并将函数体赋值给他（匿名函数是不参与预编译的，因为它是变量）。而变量提升作为不合理的地方在 ES6 中已经解决了，函数提升还存在。<br>o 解释执行：执行到变量就赋值，如果变量没有被定义，也就没有被预编译直接赋值，在 ES5 非严格模式下这个变量会成为 window 的一个属性，也就是成为全局变量。string、int 这样的值就是直接把值放在变量的存储空间里，object 对象就是把指针指向变量的存储空间。函数执行，就将函数的环境推入一个环境的栈中，执行完成后再弹出，控制权交还给之前的环境。JS 作用域其实就是这样的执行流机制实现的。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
+  
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/universe.css"/>
+      <url>/css/universe.css</url>
+      
+        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {  display: block;  position: fixed;  margin: 0;  padding: 0;  border: 0;  outline: 0;  left: 0;  top: 0;  width: 100%;  height: 100%;  pointer-events: none;  /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */  z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[@import "//at.alicdn.com/t/font_2264842_b004iy0kk2b.css";/* 页脚与头图透明 */#footer {  background: transparent !important;}#page-header {  background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {  background: transparent !important;}#page-header::before {  background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {  background: transparent !important;}[data-theme="dark"] #page-header::before {  background: transparent !important;}/* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {  background: #1e1e1e;  color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {  background: #3ecdf1;  color: #f2f2f2;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: "YSHST";  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/优设好身体.woff2);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}/* 翻页按钮居中 */#pagination {  width: 100%;  margin: auto;}/* 一级菜单居中 */#nav .menus_items {  position: absolute !important;  width: fit-content !important;  left: 50% !important;  transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {  display: flex !important;}/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */.menus_items .menus_item:nth-child(2) .menus_item_child {  left: -125px;}夜间模式菜单栏发光字 [data-theme="dark"] #nav .site-page,[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {  text-shadow: 0 0 2px var(--theme-color) !important;}/* 手机端适配 */[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {  text-shadow: 0 0 2px var(--theme-color) !important;}/* 闪烁变动颜色连续渐变 */#site-name,#site-title,#site-subtitle,#post-info,.author-info__name,.author-info__description {  transition: text-shadow 1s linear !important;}/* 日间模式不生效 */[data-theme="light"] #site-name,[data-theme="light"] #site-title,[data-theme="light"] #site-subtitle,[data-theme="light"] #post-info {  animation: none;}/* 夜间模式生效 */[data-theme="dark"] #site-name,[data-theme="dark"] #site-title {  animation: light_15px 10s linear infinite;}[data-theme="dark"] #site-subtitle {  animation: light_10px 10s linear infinite;}[data-theme="dark"] #post-info {  animation: light_5px 10s linear infinite;}/* 关键帧描述 */@keyframes light_15px {  0% {    text-shadow: #5636ed 0 0 15px;  }  12.5% {    text-shadow: #11ee5e 0 0 15px;  }  25% {    text-shadow: #f14747 0 0 15px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 15px;  }  50% {    text-shadow: #b347f1 0 0 15px;  }  62.5% {    text-shadow: #002afa 0 0 15px;  }  75% {    text-shadow: #ed709b 0 0 15px;  }  87.5% {    text-shadow: #39c5bb 0 0 15px;  }  100% {    text-shadow: #5636ed 0 0 15px;  }}@keyframes light_10px {  0% {    text-shadow: #5636ed 0 0 10px;  }  12.5% {    text-shadow: #11ee5e 0 0 10px;  }  25% {    text-shadow: #f14747 0 0 10px;  }  37.5% {    text-shadow: #f1a247 0 0 10px;  }  50% {    text-shadow: #f1ee47 0 0 10px;  }  50% {    text-shadow: #b347f1 0 0 10px;  }  62.5% {    text-shadow: #002afa 0 0 10px;  }  75% {    text-shadow: #ed709b 0 0 10px;  }  87.5% {    text-shadow: #39c5bb 0 0 10px;  }  100% {    text-shadow: #5636ed 0 0 10px;  }}@keyframes light_5px {  0% {    text-shadow: #5636ed 0 0 5px;  }  12.5% {    text-shadow: #11ee5e 0 0 5px;  }  25% {    text-shadow: #f14747 0 0 5px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 5px;  }  50% {    text-shadow: #b347f1 0 0 5px;  }  62.5% {    text-shadow: #002afa 0 0 5px;  }  75% {    text-shadow: #ed709b 0 0 5px;  }  87.5% {    text-shadow: #39c5bb 0 0 5px;  }  100% {    text-shadow: #5636ed 0 0 5px;  }}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {  background: linear-gradient(    -45deg,    #e8d8b9,    #eccec5,    #a3e9eb,    #bdbdf0,    #eec1ea  );  box-shadow: 0 0 5px rgb(66, 68, 68);  position: relative;  background-size: 400% 400%;  -webkit-animation: Gradient 10s ease infinite;  -moz-animation: Gradient 10s ease infinite;  animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@-moz-keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}@keyframes Gradient {  0% {    background-position: 0% 50%;  }  50% {    background-position: 100% 50%;  }  100% {    background-position: 0% 50%;  }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content > .card-widget.card-info {  background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {  background-color: #3eb8be;  border-radius: 8px;}/* 鼠标样式 */#cursor {  position: fixed;  width: 16px;  height: 16px;  /* 这里改变跟随的底色 */  background: var(--theme-color);  border-radius: 8px;  opacity: 0.25;  z-index: 10086;  pointer-events: none;  transition: 0.2s ease-in-out;  transition-property: background, opacity, transform;}#cursor.hidden {  opacity: 0;}#cursor.hover {  opacity: 0.1;  transform: scale(2.5);  -webkit-transform: scale(2.5);  -moz-transform: scale(2.5);  -ms-transform: scale(2.5);  -o-transform: scale(2.5);}#cursor.active {  opacity: 0.5;  transform: scale(0.5);  -webkit-transform: scale(0.5);  -moz-transform: scale(0.5);  -ms-transform: scale(0.5);  -o-transform: scale(0.5);}#cursor {  /* 这里改变跟随的底色 */  background: rgb(57, 197, 187);}:root {  --trans-light: rgba(255, 255, 255, 0.88);  --trans-dark: rgba(25, 25, 25, 0.88);  --border-style: 1px solid rgb(169, 169, 169);  --backdrop-filter: blur(5px) saturate(150%);}/* 首页文章卡片 */#recent-posts > .recent-post-item {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border-radius: 25px;  border: var(--border-style);}/* 首页侧栏卡片 */#aside-content .card-widget {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border-radius: 18px;  border: var(--border-style);}/* 文章页、归档页、普通页面 */div#post,div#page,div#archive {  background: var(--trans-light);  backdrop-filter: var(--backdrop-filter);  border: var(--border-style);  border-radius: 20px;}/* 导航栏 */#page-header.nav-fixed #nav {  background: rgba(255, 255, 255, 0.75);  backdrop-filter: var(--backdrop-filter);}[data-theme="dark"] #page-header.nav-fixed #nav {  background: rgba(0, 0, 0, 0.7) !important;}/* 夜间模式遮罩 */[data-theme="dark"] #recent-posts > .recent-post-item,[data-theme="dark"] #aside-content .card-widget,[data-theme="dark"] div#post,[data-theme="dark"] div#archive,[data-theme="dark"] div#page {  background: var(--trans-dark);}/* 夜间模式页脚页头遮罩透明 */[data-theme="dark"] #footer::before {  background: transparent !important;}[data-theme="dark"] #page-header::before {  background: transparent !important;}/* 阅读模式 */.read-mode #aside-content .card-widget {  background: rgba(158, 204, 171, 0.5) !important;}.read-mode div#post {  background: rgba(158, 204, 171, 0.5) !important;}/* 夜间模式下的阅读模式 */[data-theme="dark"] .read-mode #aside-content .card-widget {  background: rgba(25, 25, 25, 0.9) !important;  color: #ffffff;}[data-theme="dark"] .read-mode div#post {  background: rgba(25, 25, 25, 0.9) !important;  color: #ffffff;}svg.icon {  width: 1.28em;  height: 1.28em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;}svg.social_icon {  width: 1.2em;  height: 1.2em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;}svg.menu_icon {  width: 1.28em;  height: 1.28em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;}/* 滚动条样式 */::-webkit-scrollbar {  width: 8px;  height: 8px;}::-webkit-scrollbar-track {  background-color: rgba(73, 177, 245, 0.2);  border-radius: 2em;}::-webkit-scrollbar-thumb {  background-color: var(--theme-color);  background-image: -webkit-linear-gradient(    45deg,    rgba(255, 255, 255, 0.4) 25%,    transparent 25%,    transparent 50%,    rgba(255, 255, 255, 0.4) 50%,    rgba(255, 255, 255, 0.4) 75%,    transparent 75%,    transparent  );  border-radius: 2em;}::-webkit-scrollbar-corner {  background-color: transparent;}::-moz-selection {  color: #fff;  background-color: var(--theme-color);}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/cursor.js"/>
+      <url>/js/cursor.js</url>
+      
+        <content type="html"><![CDATA[var CURSORMath.lerp = (a, b, n) => (1 - n) * a + n * bconst getStyle = (el, attr) => {  try {    return window.getComputedStyle      ? window.getComputedStyle(el)[attr]      : el.currentStyle[attr]  } catch (e) { }  return ""}class Cursor {  constructor() {    this.pos = { curr: null, prev: null }    this.pt = []    this.create()    this.init()    this.render()  }  move (left, top) {    this.cursor.style["left"] = `${left}px`    this.cursor.style["top"] = `${top}px`  }  create () {    if (!this.cursor) {      this.cursor = document.createElement("div")      this.cursor.id = "cursor"      this.cursor.classList.add("hidden")      document.body.append(this.cursor)    }    var el = document.getElementsByTagName('*')    for (let i = 0; i < el.length; i++)      if (getStyle(el[i], "cursor") == "pointer")        this.pt.push(el[i].outerHTML)    document.body.appendChild((this.scr = document.createElement("style")))    // 这里改变鼠标指针的颜色 由svg生成    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='.5'/></svg>") 4 4, auto}`  }  refresh () {    this.scr.remove()    this.cursor.classList.remove("hover")    this.cursor.classList.remove("active")    this.pos = { curr: null, prev: null }    this.pt = []    this.create()    this.init()    this.render()  }  init () {    document.onmouseover = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.add("hover")    document.onmouseout = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.remove("hover")    document.onmousemove = e => { (this.pos.curr == null) && this.move(e.clientX - 8, e.clientY - 8); this.pos.curr = { x: e.clientX - 8, y: e.clientY - 8 }; this.cursor.classList.remove("hidden") }    document.onmouseenter = e => this.cursor.classList.remove("hidden")    document.onmouseleave = e => this.cursor.classList.add("hidden")    document.onmousedown = e => this.cursor.classList.add("active")    document.onmouseup = e => this.cursor.classList.remove("active")  }  render () {    if (this.pos.prev) {      this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15)      this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15)      this.move(this.pos.prev.x, this.pos.prev.y)    } else {      this.pos.prev = this.pos.curr    }    requestAnimationFrame(() => this.render())  }}(() => {  CURSOR = new Cursor()  // 需要重新获取列表时，使用 CURSOR.refresh()})()]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/light.js"/>
+      <url>/js/light.js</url>
+      
+        <content type="html"><![CDATA[// // 霓虹灯效果// // 颜色数组// var arr = ["#39c5bb", "#f14747", "#f1a247", "#f1ee47", "#b347f1", "#1edbff", "#ed709b", "#5636ed"]// // 颜色索引// var idx = 0// // 切换颜色// function changeColor () {//   // 仅夜间模式才启用//   if (document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark') {//     if (document.getElementById("site-name"))//       document.getElementById("site-name").style.textShadow = arr[idx] + " 0 0 15px"//     if (document.getElementById("site-title"))//       document.getElementById("site-title").style.textShadow = arr[idx] + " 0 0 15px"//     if (document.getElementById("site-subtitle"))//       document.getElementById("site-subtitle").style.textShadow = arr[idx] + " 0 0 10px"//     if (document.getElementById("post-info"))//       document.getElementById("post-info").style.textShadow = arr[idx] + " 0 0 5px"//     try {//       document.getElementsByClassName("author-info__name")[0].style.textShadow = arr[idx] + " 0 0 12px"//       document.getElementsByClassName("author-info__description")[0].style.textShadow = arr[idx] + " 0 0 12px"//     } catch {//     }//     idx++//     if (idx == 8) {//       idx = 0//     }//   } else {//     // 白天模式恢复默认//     if (document.getElementById("site-name"))//       document.getElementById("site-name").style.textShadow = "#1e1e1ee0 1px 1px 1px"//     if (document.getElementById("site-title"))//       document.getElementById("site-title").style.textShadow = "#1e1e1ee0 1px 1px 1px"//     if (document.getElementById("site-subtitle"))//       document.getElementById("site-subtitle").style.textShadow = "#1e1e1ee0 1px 1px 1px"//     if (document.getElementById("post-info"))//       document.getElementById("post-info").style.textShadow = "#1e1e1ee0 1px 1px 1px"//     try {//       document.getElementsByClassName("author-info__name")[0].style.textShadow = ""//       document.getElementsByClassName("author-info__description")[0].style.textShadow = ""//     } catch {//     }//   }// }// // 开启计时器// window.onload = setInterval(changeColor, 1200)]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/universe.js"/>
+      <url>/js/universe.js</url>
+      
+        <content type="html"><![CDATA[function dark () { window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame; var n, e, i, h, t = .05, s = document.getElementById("universe"), o = !0, a = "180,184,240", r = "226,225,142", d = "226,225,224", c = []; function f () { n = window.innerWidth, e = window.innerHeight, i = .216 * n, s.setAttribute("width", n), s.setAttribute("height", e) } function u () { h.clearRect(0, 0, n, e); for (var t = c.length, i = 0; i < t; i++) { var s = c[i]; s.move(), s.fadeIn(), s.fadeOut(), s.draw() } } function y () { this.reset = function () { this.giant = m(3), this.comet = !this.giant && !o && m(10), this.x = l(0, n - 10), this.y = l(0, e), this.r = l(1.1, 2.6), this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t, this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120), this.fadingOut = null, this.fadingIn = !0, this.opacity = 0, this.opacityTresh = l(.2, 1 - .4 * (this.comet + 1 - 1)), this.do = l(5e-4, .002) + .001 * (this.comet + 1 - 1) }, this.fadeIn = function () { this.fadingIn && (this.fadingIn = !(this.opacity > this.opacityTresh), this.opacity += this.do) }, this.fadeOut = function () { this.fadingOut && (this.fadingOut = !(this.opacity < 0), this.opacity -= this.do / 2, (this.x > n || this.y < 0) && (this.fadingOut = !1, this.reset())) }, this.draw = function () { if (h.beginPath(), this.giant) h.fillStyle = "rgba(" + a + "," + this.opacity + ")", h.arc(this.x, this.y, 2, 0, 2 * Math.PI, !1); else if (this.comet) { h.fillStyle = "rgba(" + d + "," + this.opacity + ")", h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, !1); for (var t = 0; t < 30; t++)h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")", h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2), h.fill() } else h.fillStyle = "rgba(" + r + "," + this.opacity + ")", h.rect(this.x, this.y, this.r, this.r); h.closePath(), h.fill() }, this.move = function () { this.x += this.dx, this.y += this.dy, !1 === this.fadingOut && this.reset(), (this.x > n - n / 4 || this.y < 0) && (this.fadingOut = !0) }, setTimeout(function () { o = !1 }, 50) } function m (t) { return Math.floor(1e3 * Math.random()) + 1 < 10 * t } function l (t, i) { return Math.random() * (i - t) + t } f(), window.addEventListener("resize", f, !1), function () { h = s.getContext("2d"); for (var t = 0; t < i; t++)c[t] = new y, c[t].reset(); u() }(), function t () { document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark' && u(), window.requestAnimationFrame(t) }() };dark()]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
   
 </search>
